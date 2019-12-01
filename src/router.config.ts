@@ -4,6 +4,7 @@ import { HomewidgetComponent } from "./app/homewidget/homewidget.component";
 import { AboutComponent } from "./app/about/about.component";
 import { MenuComponent } from "./app/menu/menu.component";
 import { AboutwidgetComponent } from "./app/aboutwidget/aboutwidget.component";
+import { HomewidgetmenuComponent } from './app/homewidgetmenu/homewidgetmenu.component';
 export const routerConfig: Routes = [
   {
     path: "home",
@@ -15,8 +16,8 @@ export const routerConfig: Routes = [
       },
       {
         path: "",
-        outlet: "sidemenu",
-        component: MenuComponent
+        outlet: "homemenu",
+        component: HomewidgetmenuComponent
       }
     ]
   },
