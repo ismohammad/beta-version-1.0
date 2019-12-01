@@ -14,18 +14,26 @@
 		<form class="text-center border border-light p-5" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 			<h2 class="text-center">Log in</h2>
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Username"   required="required">
-        </div>
-				<div class="form-group">
-					<input type="password" class="form-control" placeholder="Password" required="required">
-        </div>
-					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-block">Log in</button>
-					</div>
-					<div class="form-group">
-						<a href="#" class="pull-left">Signup</a> &nbsp;|&nbsp;
-						<a href="#" class="pull-right">Forget Password?</a>
-					</div>
+				<input type="text" class="form-control" placeholder="Username" formControlName="username"
+        [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+        >
+				<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+					<div *ngIf="f.username.errors.required">Username is required</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" placeholder="Password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+				<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+					<div *ngIf="f.password.errors.required">Password is required</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-block">Log in</button>
+			</div>
+			<div class="form-group">
+				<a href="#" class="pull-left">Signup</a> &nbsp;|&nbsp;
+				<a href="#" class="pull-right">Forget Password?</a>
+			</div>
 		</form>
 
 
