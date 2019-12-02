@@ -8,8 +8,8 @@ import { HomeComponent } from "./home/home.component";
 import { HomewidgetComponent } from "./homewidget/homewidget.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MenuComponent } from "./menu/menu.component";
-import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.component";
 import { HomewidgetmenuComponent } from "./homewidgetmenu/homewidgetmenu.component";
+import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.component";
 
 @NgModule({
   imports: [
