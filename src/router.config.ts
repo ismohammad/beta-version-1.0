@@ -18,7 +18,7 @@ export const routerConfig: Routes = [
         path: "",
         outlet: "homemenu",
         component: HomewidgetmenuComponent
-      }
+      }       
     ]
   },
   {
