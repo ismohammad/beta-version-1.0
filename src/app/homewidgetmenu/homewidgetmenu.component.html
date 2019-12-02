@@ -8,34 +8,35 @@
 		}
 	</style>
 </head>
-<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-
-	<div class="login-form">
-		<form class="text-center border border-light p-5" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-			<h2 class="text-center">Log in</h2>
+<div class="card">
+	<article class="card-body">
+		<a href="" class="float-right btn btn-outline-primary">Sign up</a>
+		<h4 class="card-title mb-4 mt-1">Sign in</h4>
+		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Username" formControlName="username"
-        [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+				<label>Your email</label>
+				<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
         >
 				<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
 					<div *ngIf="f.username.errors.required">Username is required</div>
 				</div>
-			</div>
+			</div> <!-- form-group// -->
 			<div class="form-group">
-				<input type="password" class="form-control" placeholder="Password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+				<a class="float-right" href="#">Forgot?</a>
+				<label>Your password</label>
+				<input class="form-control" placeholder="******" type="password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
 				<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
 					<div *ngIf="f.password.errors.required">Password is required</div>
 				</div>
-			</div>
+			</div> <!-- form-group// -->
 			<div class="form-group">
-				<button type="submit" class="btn btn-primary btn-block">Log in</button>
-			</div>
+				<div class="checkbox">
+					<label> <input type="checkbox"> Save password </label>
+				</div> <!-- checkbox .// -->
+			</div> <!-- form-group// -->
 			<div class="form-group">
-				<a href="#" class="pull-left">Signup</a> &nbsp;|&nbsp;
-				<a href="#" class="pull-right">Forget Password?</a>
-			</div>
+				<button type="submit" class="btn btn-primary btn-block"> Login  </button>
+			</div> <!-- form-group// -->
 		</form>
-
-
-	</div>
-</div>
+	</article>
+</div> <!-- card.// -->
