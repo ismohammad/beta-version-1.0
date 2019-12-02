@@ -19,7 +19,7 @@ export const routerConfig: Routes = [
         path: "",
         outlet: "homemenu",
         component: HomewidgetmenuComponent
-      }       
+      }
     ]
   },
   {
@@ -36,7 +36,7 @@ export const routerConfig: Routes = [
         component: MenuComponent
       }
     ]
-  },   
+  },
   {
     path: "",
     redirectTo: "/home",

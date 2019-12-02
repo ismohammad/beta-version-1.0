@@ -9,8 +9,9 @@ import { HomewidgetComponent } from "./homewidget/homewidget.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MenuComponent } from "./menu/menu.component";
 import { HomewidgetmenuComponent } from "./homewidgetmenu/homewidgetmenu.component";
-
 import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.component";
+import { ManageuserComponent } from './manageuser/manageuser.component';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -25,7 +26,8 @@ import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.comp
     DashboardComponent,    
     MenuComponent,    
     HomewidgetmenuComponent,
-    DashboardwidgetComponent
+    DashboardwidgetComponent,
+    ManageuserComponent
   ],
   bootstrap: [AppComponent]
 })

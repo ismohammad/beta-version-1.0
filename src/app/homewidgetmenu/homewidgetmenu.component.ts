@@ -38,15 +38,20 @@ export class HomewidgetmenuComponent implements OnInit {
   get f() {
     return this.loginForm.controls;
   }
-  onSubmit() {
+
+  onLogin() {
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
     }
     console.log("This is username ", this.f.username.value);
     console.log("This is password ", this.f.password.value);
-    console.log("This is returnUrl ", this.returnUrl);
+    console.log("This is onLogin -- returnUrl ", this.returnUrl);
 
     this.router.navigate([this.returnUrl]);
+  }
+
+  onForgotPassword(){
+    console.log("This is onForgetPassword ", this.returnUrl);
   }
 }
