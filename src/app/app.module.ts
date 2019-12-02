@@ -9,8 +9,8 @@ import { HomewidgetComponent } from "./homewidget/homewidget.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MenuComponent } from "./menu/menu.component";
 import { HomewidgetmenuComponent } from "./homewidgetmenu/homewidgetmenu.component";
-import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.component";
 
+import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.component";
 @NgModule({
   imports: [
     BrowserModule,
@@ -22,10 +22,10 @@ import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.comp
     AppComponent,
     HomeComponent,
     HomewidgetComponent,
-    DashboardComponent,
-    DashboardwidgetComponent,
+    DashboardComponent,    
     MenuComponent,    
-    HomewidgetmenuComponent
+    HomewidgetmenuComponent,
+    DashboardwidgetComponent
   ],
   bootstrap: [AppComponent]
 })
