@@ -1,21 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-dark navbar-full" style="background-color: #808080">
+<nav class="navbar navbar-expand">
 	<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-		<a class="navbar-brand" href="#">
-			<img src="https://homepages.cae.wisc.edu/~ece533/images/tulips.png" width="30" height="30" class="d-inline-block align-top" alt="">
-    Ishaq-Mohammad
-    </a>
-			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item active">
-					<a class="nav-link" href="#" routerLink="home">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#" routerLink="about">Overview</a>
-				</li>
+		<img src="https://homepages.cae.wisc.edu/~ece533/images/tulips.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    &nbsp;
+		<h3>Service App</h3>
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			<li class="nav-item active">
+				<a class="nav-link" href="#" routerLink="home"><b>Home</b> <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#" routerLink="about"><b>Overview</b></a>
+			</li>
 
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<button class="btn btn-primary my-2 my-sm-0" type="submit">Dashboard</button>
-			</form>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<button class="btn btn-outline-primary" type="submit">Dashboard</button>
+		</form>
 	</div>
 </nav>
-<router-outlet></router-outlet>
+<main>
+
+	<body>
+		<router-outlet></router-outlet>
+	</body>
+</main>
