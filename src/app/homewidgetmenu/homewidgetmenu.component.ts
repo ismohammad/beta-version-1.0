@@ -51,7 +51,7 @@ export class HomewidgetmenuComponent implements OnInit {
     this.router.navigate([this.returnUrl]);
   }
 
-  onForgotPassword(){
-    console.log("This is onForgetPassword ", this.returnUrl);
+  onForgotPassword(username:string){
+    console.log("This is onForgetPassword ", username);
   }
 }
