@@ -1,9 +1,11 @@
 import { Routes } from "@angular/router";
 import { HomeComponent } from "./app/home/home.component";
 import { HomewidgetComponent } from "./app/homewidget/homewidget.component";
-import { AboutComponent } from "./app/about/about.component";
+import { DashboardComponent } from "./app/dashboard/dashboard.component";
 import { MenuComponent } from "./app/menu/menu.component";
-import { AboutwidgetComponent } from "./app/aboutwidget/aboutwidget.component";
+
+import { DashboardwidgetComponent } from "./adashboardwidget/dashboardwidget.component";
+
 import { HomewidgetmenuComponent } from "./app/homewidgetmenu/homewidgetmenu.component";
 export const routerConfig: Routes = [
   {
@@ -23,11 +25,11 @@ export const routerConfig: Routes = [
   },
   {
     path: "about",
-    component: AboutComponent,
+    component: DashboardComponent,
     children: [
       {
         path: "",
-        component: AboutwidgetComponent
+        component: DashboardwidgetComponent
       },
       {
         path: "",
