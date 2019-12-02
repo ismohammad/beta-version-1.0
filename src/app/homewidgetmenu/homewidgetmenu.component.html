@@ -16,7 +16,7 @@
 					<a (click)="onForgotPassword('ishaq')" class="float-right btn btn-outline-primary btn-sm"
 						style="margin-bottom:4px;width:80px">Forgot?</a>
 					<label>Your password</label>
-					<input class="form-control" placeholder="******" type="password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+					<input class="form-control" placeholder="Password" type="password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
 					<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
 						<div *ngIf="f.password.errors.required">Password is required</div>
 					</div>
