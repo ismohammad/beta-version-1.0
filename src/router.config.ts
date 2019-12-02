@@ -3,10 +3,9 @@ import { HomeComponent } from "./app/home/home.component";
 import { HomewidgetComponent } from "./app/homewidget/homewidget.component";
 import { DashboardComponent } from "./app/dashboard/dashboard.component";
 import { MenuComponent } from "./app/menu/menu.component";
-
-import { DashboardwidgetComponent } from "./adashboardwidget/dashboardwidget.component";
-
+import { DashboardwidgetComponent } from "./app/dashboardwidget/dashboardwidget.component";
 import { HomewidgetmenuComponent } from "./app/homewidgetmenu/homewidgetmenu.component";
+
 export const routerConfig: Routes = [
   {
     path: "home",
@@ -24,7 +23,7 @@ export const routerConfig: Routes = [
     ]
   },
   {
-    path: "about",
+    path: "dashboard",
     component: DashboardComponent,
     children: [
       {
@@ -37,12 +36,7 @@ export const routerConfig: Routes = [
         component: MenuComponent
       }
     ]
-  },
-  {
-    path: "dashboard",
-    redirectTo: "/about",
-    pathMatch: "full"
-  },
+  },   
   {
     path: "",
     redirectTo: "/home",

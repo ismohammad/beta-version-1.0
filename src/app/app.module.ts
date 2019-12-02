@@ -23,8 +23,8 @@ import { HomewidgetmenuComponent } from "./homewidgetmenu/homewidgetmenu.compone
     HomeComponent,
     HomewidgetComponent,
     DashboardComponent,
-    MenuComponent,
-    DashboardComponent,
+    DashboardwidgetComponent,
+    MenuComponent,    
     HomewidgetmenuComponent
   ],
   bootstrap: [AppComponent]
