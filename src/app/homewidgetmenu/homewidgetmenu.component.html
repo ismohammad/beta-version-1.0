@@ -25,7 +25,8 @@
 						</div>
 					</div> <!-- form-group// -->
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-block"> Login  </button>
+						<button [disabled]="loading" type="submit" class="btn btn-primary btn-block"> Login  </button>
+						<img *ngIf="loading" class="pl-3" src="https://jj2hgq.ch.files.1drv.com/y4myOCN7C-uQ07zF_b5xgKmAiDSbf9RLfHdRd5HrNxVQTHq8tjiEPrhARdyZ6VC09qWcL51g0zN-o__FZLcjfYFyt3utAa73AZu3KtZjIVlFJ6dl1A1tOTIVZSjhjGlOTrD9r5qfJtwPMLWQ7dNpFxsSQ1uR28b1Oj9GHDnvhE1y_Zq3dztRh-SAm_aiFnNReRd_4XGRrRZfaCzKCefjkpO4w?width=591&height=591&cropmode=none" width="30" height="30"   alt=""/>
 					</div> <!-- form-group// -->
 				</form>
 			</article>

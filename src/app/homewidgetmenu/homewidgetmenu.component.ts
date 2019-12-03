@@ -74,9 +74,7 @@ export class HomewidgetmenuComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-    console.log("This is username ", this.loginvar.username.value);
-    console.log("This is password ", this.loginvar.password.value);
-    console.log("This is onLogin -- returnUrl ", "dashboard");
+    this.loading = true;
     this.authenticationService
       .login(this.loginvar.username.value, this.loginvar.password.value)
       .pipe(first())
