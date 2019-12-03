@@ -21,7 +21,7 @@ export class HomewidgetmenuComponent implements OnInit {
   constructor(
     @Inject(FormBuilder)
     private formBuilder: FormBuilder,
-    @Inject(Router) private router: Router
+    @Inject(Router) private router: Router,    
   ) {}
 
   ngOnInit() {
@@ -51,7 +51,7 @@ export class HomewidgetmenuComponent implements OnInit {
     this.router.navigate([this.returnUrl]);
   }
 
-  onForgotPassword(username:string){
+  onForgotPassword(username: string) {
     console.log("This is onForgetPassword ", username);
   }
 }

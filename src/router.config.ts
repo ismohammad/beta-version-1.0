@@ -17,7 +17,16 @@ export const routerConfig: Routes = [
         component: HomewidgetComponent
       },
       {
+        path: ":id",
+        component: ManageuserComponent
+      },
+      {
         path: "",
+        outlet: "homemenu",
+        component: HomewidgetmenuComponent
+      },
+      {
+        path: ":id",
         outlet: "homemenu",
         component: HomewidgetmenuComponent
       }
@@ -31,10 +40,7 @@ export const routerConfig: Routes = [
         path: "",
         component: DashboardwidgetComponent
       },
-      {
-        path: ":id",
-        component: ManageuserComponent
-      },
+      
       {
         path: "",
         outlet: "sidemenu",

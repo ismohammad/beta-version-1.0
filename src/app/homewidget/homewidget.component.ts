@@ -7,10 +7,12 @@ import { Router, ActivatedRoute } from "@angular/router";
   styleUrls: ["./homewidget.component.css"]
 })
 export class HomewidgetComponent {
+  photography = false;
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   navigate(path) {
-    this.router.navigate([{ outlets: { primary: path, sidemenu: path } }], {
+        
+    this.router.navigate([{ outlets: { primary: path, homemenu: path } }], {
       relativeTo: this.route
     });
   }
