@@ -19,6 +19,7 @@ export class HomewidgetmenuComponent implements OnInit {
   returnUrl = "dashboard";
   showLogin = true;
   showForgotPwd = false;
+  page: string;
 
   constructor(
     @Inject(FormBuilder)
@@ -57,14 +58,15 @@ export class HomewidgetmenuComponent implements OnInit {
   }
 
   navigate(path) {
-    if ((path = "fwdpage")) {
+    this.page = path;
+    if (this.page == "fwdpage") {
       this.showLogin = false;
       this.showForgotPwd = true;
-    } else {
-      if ((path = "home")) {
-        this.showLogin = true;
-        this.showForgotPwd = false;
-      }
+    }
+    if (this.page == "home") {
+      console.log("path122", path);
+      this.showLogin = true;
+      this.showForgotPwd = false;
     }
 
     console.log("path", path);

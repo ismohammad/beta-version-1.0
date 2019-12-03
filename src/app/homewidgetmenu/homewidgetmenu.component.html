@@ -32,7 +32,7 @@
 <div *ngIf="showForgotPwd">
  	<div class="card">
      	<article class="card-body">
-			<a href="navigate('home')" class="float-right btn btn-outline-primary">Home</a>
+			<a (click)="navigate('home')" class="float-right btn btn-outline-primary">Home</a>
 			<h4 class="card-title mb-4 mt-1">Forgot Password</h4>
 			<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
 				<div class="form-group">
