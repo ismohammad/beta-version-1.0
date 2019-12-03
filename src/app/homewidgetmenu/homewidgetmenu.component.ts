@@ -31,7 +31,9 @@ export class HomewidgetmenuComponent implements OnInit {
   ngOnInit() {
     this.loginForm = new FormGroup({
       username: new FormControl(),
-      password: new FormControl()
+      password: new FormControl(),
+      firstname: new FormControl(),
+      lastname: new FormControl()
     });
     this.loginForm = this.formBuilder.group({
       username: ["", Validators.required],
@@ -44,7 +46,6 @@ export class HomewidgetmenuComponent implements OnInit {
   }
 
   onLogin() {
-    
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
