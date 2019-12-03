@@ -10,9 +10,8 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MenuComponent } from "./menu/menu.component";
 import { HomewidgetmenuComponent } from "./homewidgetmenu/homewidgetmenu.component";
 import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.component";
-import { ManageuserComponent } from './manageuser/manageuser.component';
-import { HomecontentComponent } from './homecontent/homecontent.component';
-import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
+import { ManageuserComponent } from "./manageuser/manageuser.component";
+import { HomecontentComponent } from "./homecontent/homecontent.component";
 
 @NgModule({
   imports: [
@@ -25,13 +24,12 @@ import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
     AppComponent,
     HomeComponent,
     HomewidgetComponent,
-    DashboardComponent,    
-    MenuComponent,    
+    DashboardComponent,
+    MenuComponent,
     HomewidgetmenuComponent,
     DashboardwidgetComponent,
     ManageuserComponent,
-    HomecontentComponent,
-    ForgotpwdComponent
+    HomecontentComponent
   ],
   bootstrap: [AppComponent]
 })
