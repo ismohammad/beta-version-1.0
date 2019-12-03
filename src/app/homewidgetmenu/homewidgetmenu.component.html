@@ -1,5 +1,7 @@
 <div class="container">
-<div *ngIf="showLogin">
+  Login  : {{showLoginPage}}
+   Forget : {{showForgotPwdPage}}
+<div *ngIf="showLoginPage">
 	<div class="card">
 		<article class="card-body">
 			<a href="" class="float-right btn btn-outline-primary">Sign up</a>
@@ -15,7 +17,7 @@
 				</div> <!-- form-group// -->
 				<div class="form-group float-right">
 					<a (click)="navigate('fwdpage')" class="float-right btn btn-outline-primary btn-sm"
-						style="margin-bottom:4px;width:80px">Forgot?</a>
+						style="margin-top:-5px;width:80px">Forgot?</a>
 					<label>Your password</label>
 					<input class="form-control" placeholder="Password" type="password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
 					<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
@@ -29,10 +31,10 @@
 		</article>
 	</div>  
 </div>
-<div *ngIf="showForgotPwd">
+<div *ngIf="showForgotPwdPage">
  	<div class="card">
      	<article class="card-body">
-			<a (click)="navigate('home')" class="float-right btn btn-outline-primary">Home</a>
+			<a (click)="navigate('login')" class="float-right btn btn-outline-primary">Login</a>
 			<h4 class="card-title mb-4 mt-1">Forgot Password</h4>
 			<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
 				<div class="form-group">

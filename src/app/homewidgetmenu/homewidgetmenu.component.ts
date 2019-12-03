@@ -16,9 +16,8 @@ import {
 export class HomewidgetmenuComponent implements OnInit {
   loginForm: FormGroup;
   submitted = false;
-  returnUrl = "dashboard";
-  showLogin = true;
-  showForgotPwd = false;
+  showLoginPage = true;
+  showForgotPwdPage = false;
   page: string;
 
   constructor(
@@ -37,39 +36,40 @@ export class HomewidgetmenuComponent implements OnInit {
       username: ["", Validators.required],
       password: ["", Validators.required]
     });
-    console.log("This is u#####sername return URL ", this.returnUrl);
+    console.log("This is username return URL ", "HomewidgetmenuComponent");
   }
   get f() {
     return this.loginForm.controls;
   }
 
   onLogin() {
-    this.showLogin = false;
-    this.showForgotPwd = false;
+    this.showLoginPage = false;
+    this.showForgotPwdPage = false;
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
     }
     console.log("This is username ", this.f.username.value);
     console.log("This is password ", this.f.password.value);
-    console.log("This is onLogin -- returnUrl ", this.returnUrl);
+    console.log("This is onLogin -- returnUrl ", "dashboard");
 
-    this.router.navigate([this.returnUrl]);
+    this.router.navigate(["dashboard"]);
   }
 
   navigate(path) {
     this.page = path;
     if (this.page == "fwdpage") {
-      this.showLogin = false;
-      this.showForgotPwd = true;
+      this.showLoginPage = false;
+      this.showForgotPwdPage = true;
     }
-    if (this.page == "home") {
+    if (this.page == "login") {
       console.log("path122", path);
-      this.showLogin = true;
-      this.showForgotPwd = false;
+      this.showLoginPage = true;
+      this.showForgotPwdPage = false;
     }
 
-    console.log("path", path);
-    this.router.navigate(["home"]);
+    console.log("path anme", path);
+    console.log("this.showLogin", this.showLoginPage);
+    console.log("this.showForgotPwd", this.showForgotPwdPage);
   }
 }
