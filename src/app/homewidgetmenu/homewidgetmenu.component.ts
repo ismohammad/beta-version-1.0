@@ -17,11 +17,14 @@ export class HomewidgetmenuComponent implements OnInit {
   loginForm: FormGroup;
   submitted = false;
   returnUrl = "dashboard";
+  showLogin = true;
+  showForgotPwd = false;
 
   constructor(
     @Inject(FormBuilder)
     private formBuilder: FormBuilder,
-    @Inject(Router) private router: Router,    
+    @Inject(Router) private router: Router,
+    @Inject(ActivatedRoute) private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
@@ -40,6 +43,8 @@ export class HomewidgetmenuComponent implements OnInit {
   }
 
   onLogin() {
+    this.showLogin = false;
+    this.showForgotPwd = false;
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
@@ -51,7 +56,18 @@ export class HomewidgetmenuComponent implements OnInit {
     this.router.navigate([this.returnUrl]);
   }
 
-  onForgotPassword(username: string) {
-    console.log("This is onForgetPassword ", username);
+  navigate(path) {
+    if ((path = "fwdpage")) {
+      this.showLogin = false;
+      this.showForgotPwd = true;
+    } else {
+      if ((path = "home")) {
+        this.showLogin = true;
+        this.showForgotPwd = false;
+      }
+    }
+
+    console.log("path", path);
+    this.router.navigate(["home"]);
   }
 }

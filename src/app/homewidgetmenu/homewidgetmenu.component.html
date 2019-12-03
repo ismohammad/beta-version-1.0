@@ -1,4 +1,5 @@
 <div class="container">
+<div *ngIf="showLogin">
 	<div class="card">
 		<article class="card-body">
 			<a href="" class="float-right btn btn-outline-primary">Sign up</a>
@@ -13,7 +14,7 @@
 					</div>
 				</div> <!-- form-group// -->
 				<div class="form-group float-right">
-					<a (click)="onForgotPassword('ishaq')" class="float-right btn btn-outline-primary btn-sm"
+					<a (click)="navigate('fwdpage')" class="float-right btn btn-outline-primary btn-sm"
 						style="margin-bottom:4px;width:80px">Forgot?</a>
 					<label>Your password</label>
 					<input class="form-control" placeholder="Password" type="password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
@@ -26,5 +27,28 @@
 				</div> <!-- form-group// -->
 			</form>
 		</article>
-	</div> <!-- card.// -->
+	</div>  
+</div>
+<div *ngIf="showForgotPwd">
+ 	<div class="card">
+     	<article class="card-body">
+			<a href="navigate('home')" class="float-right btn btn-outline-primary">Home</a>
+			<h4 class="card-title mb-4 mt-1">Forgot Password</h4>
+			<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+				<div class="form-group">
+					<label>Your email</label>
+					<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+        >
+					<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+						<div *ngIf="f.username.errors.required">Username is required</div>
+					</div>
+				</div> <!-- form-group// -->
+				
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary btn-block"> Reset  </button>
+				</div> <!-- form-group// -->
+			</form>
+		</article>
+ 	</div>
+</div>
 </div>

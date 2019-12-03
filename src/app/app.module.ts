@@ -12,6 +12,7 @@ import { HomewidgetmenuComponent } from "./homewidgetmenu/homewidgetmenu.compone
 import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.component";
 import { ManageuserComponent } from './manageuser/manageuser.component';
 import { HomecontentComponent } from './homecontent/homecontent.component';
+import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { HomecontentComponent } from './homecontent/homecontent.component';
     HomewidgetmenuComponent,
     DashboardwidgetComponent,
     ManageuserComponent,
-    HomecontentComponent
+    HomecontentComponent,
+    ForgotpwdComponent
   ],
   bootstrap: [AppComponent]
 })
