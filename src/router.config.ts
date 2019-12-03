@@ -5,6 +5,7 @@ import { DashboardComponent } from "./app/dashboard/dashboard.component";
 import { MenuComponent } from "./app/menu/menu.component";
 import { DashboardwidgetComponent } from "./app/dashboardwidget/dashboardwidget.component";
 import { HomewidgetmenuComponent } from "./app/homewidgetmenu/homewidgetmenu.component";
+import { ManageuserComponent } from './app/manageuser/manageuser.component';
 
 export const routerConfig: Routes = [
   {
@@ -29,6 +30,10 @@ export const routerConfig: Routes = [
       {
         path: "",
         component: DashboardwidgetComponent
+      },
+      {
+        path: ":id",
+        component: ManageuserComponent
       },
       {
         path: "",
