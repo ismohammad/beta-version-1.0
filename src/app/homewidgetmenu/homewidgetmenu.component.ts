@@ -44,9 +44,7 @@ export class HomewidgetmenuComponent implements OnInit {
   }
 
   onLogin() {
-    this.showLoginPage = false;
-    this.showForgotPwdPage = false;
-    this.showSignupPwdPage = false;
+    
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
