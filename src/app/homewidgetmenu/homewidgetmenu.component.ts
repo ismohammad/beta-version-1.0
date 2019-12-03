@@ -18,6 +18,7 @@ export class HomewidgetmenuComponent implements OnInit {
   submitted = false;
   showLoginPage = true;
   showForgotPwdPage = false;
+  showSignupPwdPage = false;
   page: string;
 
   constructor(
@@ -45,6 +46,7 @@ export class HomewidgetmenuComponent implements OnInit {
   onLogin() {
     this.showLoginPage = false;
     this.showForgotPwdPage = false;
+    this.showSignupPwdPage = false;
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
@@ -61,15 +63,23 @@ export class HomewidgetmenuComponent implements OnInit {
     if (this.page == "fwdpage") {
       this.showLoginPage = false;
       this.showForgotPwdPage = true;
+      this.showSignupPwdPage = false;
     }
     if (this.page == "login") {
-      console.log("path122", path);
       this.showLoginPage = true;
       this.showForgotPwdPage = false;
+      this.showSignupPwdPage = false;
+    }
+    if (this.page == "signup") {
+      console.log("path122", path);
+      this.showLoginPage = false;
+      this.showForgotPwdPage = false;
+      this.showSignupPwdPage = true;
     }
 
     console.log("path anme", path);
     console.log("this.showLogin", this.showLoginPage);
     console.log("this.showForgotPwd", this.showForgotPwdPage);
+    console.log("this.showSignupPwdPage", this.showSignupPwdPage);
   }
 }

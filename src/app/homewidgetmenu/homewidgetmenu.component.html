@@ -1,56 +1,84 @@
 <div class="container">
-  Login  : {{showLoginPage}}
-   Forget : {{showForgotPwdPage}}
-<div *ngIf="showLoginPage">
-	<div class="card">
-		<article class="card-body">
-			<a href="" class="float-right btn btn-outline-primary">Sign up</a>
-			<h4 class="card-title mb-4 mt-1">Sign in</h4>
-			<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-				<div class="form-group">
-					<label>Your email</label>
-					<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+
+	<!-- Login Page -->
+	<div *ngIf="showLoginPage">
+		<div class="card">
+			<article class="card-body">
+				<a (click)="navigate('signup')" class="float-right btn btn-outline-primary">Sign up</a>
+				<h4 class="card-title mb-4 mt-1">Sign in</h4>
+				<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+					<div class="form-group">
+						<label>Your email</label>
+						<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
         >
-					<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-						<div *ngIf="f.username.errors.required">Username is required</div>
-					</div>
-				</div> <!-- form-group// -->
-				<div class="form-group float-right">
-					<a (click)="navigate('fwdpage')" class="float-right btn btn-outline-primary btn-sm"
-						style="margin-top:-5px;width:80px">Forgot?</a>
-					<label>Your password</label>
-					<input class="form-control" placeholder="Password" type="password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-					<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-						<div *ngIf="f.password.errors.required">Password is required</div>
-					</div>
-				</div> <!-- form-group// -->
-				<div class="form-group">
-					<button type="submit" class="btn btn-primary btn-block"> Login  </button>
-				</div> <!-- form-group// -->
-			</form>
-		</article>
-	</div>  
-</div>
-<div *ngIf="showForgotPwdPage">
- 	<div class="card">
-     	<article class="card-body">
-			<a (click)="navigate('login')" class="float-right btn btn-outline-primary">Login</a>
-			<h4 class="card-title mb-4 mt-1">Forgot Password</h4>
-			<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-				<div class="form-group">
-					<label>Your email</label>
-					<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+						<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+							<div *ngIf="f.username.errors.required">Username is required</div>
+						</div>
+					</div> <!-- form-group// -->
+					<div class="form-group float-right">
+						<a (click)="navigate('fwdpage')" class="float-right btn btn-outline-primary btn-sm"
+							style="margin-top:-5px;width:80px">Forgot?</a>
+						<label>Your password</label>
+						<input class="form-control" placeholder="Password" type="password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+						<div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+							<div *ngIf="f.password.errors.required">Password is required</div>
+						</div>
+					</div> <!-- form-group// -->
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-block"> Login  </button>
+					</div> <!-- form-group// -->
+				</form>
+			</article>
+		</div>
+	</div>
+
+	<!-- Forgot Password Page -->
+
+	<div *ngIf="showForgotPwdPage">
+		<div class="card">
+			<article class="card-body">
+				<a (click)="navigate('login')" class="float-right btn btn-outline-primary">Login</a>
+				<h4 class="card-title mb-4 mt-1">Forgot Password</h4>
+				<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+					<div class="form-group">
+						<label>Your email</label>
+						<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
         >
-					<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-						<div *ngIf="f.username.errors.required">Username is required</div>
-					</div>
-				</div> <!-- form-group// -->
-				
-				<div class="form-group">
-					<button type="submit" class="btn btn-primary btn-block"> Reset  </button>
-				</div> <!-- form-group// -->
-			</form>
-		</article>
- 	</div>
-</div>
+						<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+							<div *ngIf="f.username.errors.required">Username is required</div>
+						</div>
+					</div> <!-- form-group// -->
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-block"> Reset  </button>
+					</div> <!-- form-group// -->
+				</form>
+			</article>
+		</div>
+	</div>
+
+	<!-- Sign Up Page -->
+	<div *ngIf="showSignupPwdPage">
+		<div class="card">
+			<article class="card-body">
+				<a (click)="navigate('login')" class="float-right btn btn-outline-primary">Login</a>
+				<h4 class="card-title mb-4 mt-1">Signup</h4>
+				<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+					<div class="form-group">
+						<label>Your email</label>
+						<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+        >
+						<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+							<div *ngIf="f.username.errors.required">Username is required</div>
+						</div>
+					</div> <!-- form-group// -->
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-block"> Signup </button>
+					</div> <!-- form-group// -->
+				</form>
+			</article>
+		</div>
+	</div>
+
 </div>
