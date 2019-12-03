@@ -12,6 +12,7 @@ import { HomewidgetmenuComponent } from "./homewidgetmenu/homewidgetmenu.compone
 import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.component";
 import { ManageuserComponent } from "./manageuser/manageuser.component";
 import { HomecontentComponent } from "./homecontent/homecontent.component";
+import { AuthenticationService } from './service/authentication.service';
 
 @NgModule({
   imports: [
@@ -31,6 +32,7 @@ import { HomecontentComponent } from "./homecontent/homecontent.component";
     ManageuserComponent,
     HomecontentComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [AuthenticationService]
 })
 export class AppModule {}
