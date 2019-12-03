@@ -18,7 +18,11 @@ import { AuthenticationService } from "../service/authentication.service";
 export class HomewidgetmenuComponent implements OnInit {
   loginForm: FormGroup;
   signupForm: FormGroup;
-  submitted = false;
+  fPwdForm: FormGroup;
+
+  loginSubmitted = false;
+  signupSubmitted = false;
+  fPwdSubmitted = false;
   showLoginPage = true;
   showForgotPwdPage = false;
   showSignupPwdPage = false;
@@ -37,6 +41,7 @@ export class HomewidgetmenuComponent implements OnInit {
   ngOnInit() {
     this.setloginForm();
     this.setSignupForm();
+    this.setForgotPwdForm();
   }
   setloginForm() {
     this.loginForm = this.formBuilder.group({
@@ -52,6 +57,11 @@ export class HomewidgetmenuComponent implements OnInit {
       lastname: ["", Validators.required]
     });
   }
+  setForgotPwdForm() {
+    this.fPwdForm = this.formBuilder.group({
+      fPwdForm_username: ["", Validators.required]
+    });
+  }
 
   /**
    * This method calls authenticationService login mething to submit the login details
@@ -60,7 +70,7 @@ export class HomewidgetmenuComponent implements OnInit {
     return this.loginForm.controls;
   }
   onLoginSubmit() {
-    this.submitted = true;
+    this.loginSubmitted = true;
     if (this.loginForm.invalid) {
       return;
     }
@@ -88,11 +98,25 @@ export class HomewidgetmenuComponent implements OnInit {
     return this.signupForm.controls;
   }
   onSignupSubmit() {
-    this.submitted = true;
+    this.signupSubmitted = true;
     if (this.signupForm.invalid) {
       return;
     }
   }
+
+  /**
+   * This method calls authenticationService login mething to submit the login details
+   */
+  get fPwdvar() {
+    return this.fPwdForm.controls;
+  }
+  onForgetPasswordSubmit() {
+    this.fPwdSubmitted = true;
+    if (this.fPwdForm.invalid) {
+      return;
+    }
+  }
+
   /**
    * This method navigate to respective UI based on the path
    */
@@ -102,18 +126,22 @@ export class HomewidgetmenuComponent implements OnInit {
       this.showLoginPage = false;
       this.showForgotPwdPage = true;
       this.showSignupPwdPage = false;
+      this.signupSubmitted = false;
+      this.loginSubmitted = false;
     }
     if (this.page == "login") {
       this.showLoginPage = true;
       this.showForgotPwdPage = false;
       this.showSignupPwdPage = false;
+      this.signupSubmitted = false;
+      this.fPwdSubmitted = false;
     }
     if (this.page == "signup") {
       this.showLoginPage = false;
       this.showForgotPwdPage = false;
       this.showSignupPwdPage = true;
+      this.loginSubmitted = false;
+      this.fPwdSubmitted = false;
     }
-    console.log("this.loginForm", this.loginForm);
-    console.log("this.signupForm", this.signupForm);
   }
 }

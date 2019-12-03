@@ -9,9 +9,9 @@
 				<form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
 					<div class="form-group">
 						<label>Your email</label>
-						<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && loginvar.username.errors }"
+						<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': loginSubmitted && loginvar.username.errors }"
             >
-						<div *ngIf="submitted && loginvar.username.errors" class="invalid-feedback">
+						<div *ngIf="loginSubmitted && loginvar.username.errors" class="invalid-feedback">
 							<div *ngIf="loginvar.username.errors.required">Username is required</div>
 						</div>
 					</div> <!-- form-group// -->
@@ -19,8 +19,8 @@
 						<a (click)="navigate('fwdpage')" class="float-right btn btn-outline-primary btn-sm"
 							style="margin-top:-5px;width:80px">Forgot?</a>
 						<label>Your password</label>
-						<input class="form-control" placeholder="Password" type="password" formControlName="password"[ngClass]="{ 'is-invalid': submitted && loginvar.password.errors }" />
-						<div *ngIf="submitted && loginvar.password.errors" class="invalid-feedback">
+						<input class="form-control" placeholder="Password" type="password" formControlName="password"[ngClass]="{ 'is-invalid': loginSubmitted && loginvar.password.errors }" />
+						<div *ngIf="loginSubmitted && loginvar.password.errors" class="invalid-feedback">
 							<div *ngIf="loginvar.password.errors.required">Password is required</div>
 						</div>
 					</div> <!-- form-group// -->
@@ -39,13 +39,13 @@
 			<article class="card-body">
 				<a (click)="navigate('login')" class="float-right btn btn-outline-primary">Login</a>
 				<h4 class="card-title mb-4 mt-1">Forgot Password</h4>
-				<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+				<form [formGroup]="fPwdForm" (ngSubmit)="onForgetPasswordSubmit()">
 					<div class="form-group">
 						<label>Your email</label>
-						<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && loginvar.username.errors }"
+						<input  class="form-control"  formControlName="fPwdForm_username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': fPwdSubmitted && fPwdvar.fPwdForm_username.errors }"
         >
-						<div *ngIf="submitted && loginvar.username.errors" class="invalid-feedback">
-							<div *ngIf="loginvar.username.errors.required">Username is required</div>
+						<div *ngIf="fPwdSubmitted && fPwdvar.fPwdForm_username.errors" class="invalid-feedback">
+							<div *ngIf="fPwdvar.fPwdForm_username.errors.required">Username is required</div>
 						</div>
 					</div> <!-- form-group// -->
 
@@ -66,9 +66,9 @@
 				<form [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()">
 					<div class="form-group">
 						<label>Your email</label>
-						<input  class="form-control"  formControlName="signup_username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && signupvar.signup_username.errors }"
+						<input  class="form-control"  formControlName="signup_username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': signupSubmitted && signupvar.signup_username.errors }"
         >
-						<div *ngIf="submitted && signupvar.signup_username.errors" class="invalid-feedback">
+						<div *ngIf="signupSubmitted && signupvar.signup_username.errors" class="invalid-feedback">
 							<div *ngIf="signupvar.signup_username.errors.required">Username is required</div>
 						</div>
 					</div> <!-- form-group// -->
