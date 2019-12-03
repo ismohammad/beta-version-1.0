@@ -25,8 +25,8 @@
 						</div>
 					</div> <!-- form-group// -->
 					<div class="form-group">
-						<button [disabled]="loading" type="submit" class="btn btn-primary btn-block"> Login  </button>
-						<img *ngIf="loading" class="pl-3" src="https://jj2hgq.ch.files.1drv.com/y4myOCN7C-uQ07zF_b5xgKmAiDSbf9RLfHdRd5HrNxVQTHq8tjiEPrhARdyZ6VC09qWcL51g0zN-o__FZLcjfYFyt3utAa73AZu3KtZjIVlFJ6dl1A1tOTIVZSjhjGlOTrD9r5qfJtwPMLWQ7dNpFxsSQ1uR28b1Oj9GHDnvhE1y_Zq3dztRh-SAm_aiFnNReRd_4XGRrRZfaCzKCefjkpO4w?width=591&height=591&cropmode=none" width="30" height="30"   alt=""/>
+						<button [disabled]="loadingLogin" type="submit" class="btn btn-primary btn-block"> Login  </button>
+						<img *ngIf="loadingLogin" class="pl-3" src="https://jj2hgq.ch.files.1drv.com/y4myOCN7C-uQ07zF_b5xgKmAiDSbf9RLfHdRd5HrNxVQTHq8tjiEPrhARdyZ6VC09qWcL51g0zN-o__FZLcjfYFyt3utAa73AZu3KtZjIVlFJ6dl1A1tOTIVZSjhjGlOTrD9r5qfJtwPMLWQ7dNpFxsSQ1uR28b1Oj9GHDnvhE1y_Zq3dztRh-SAm_aiFnNReRd_4XGRrRZfaCzKCefjkpO4w?width=591&height=591&cropmode=none" width="30" height="30"   alt=""/>
 					</div> <!-- form-group// -->
 				</form>
 			</article>
@@ -51,7 +51,8 @@
 					</div> <!-- form-group// -->
 
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-block"> Reset  </button>
+						<button [disabled]="loadingFPwd" type="submit" class="btn btn-primary btn-block"> Reset  </button>
+						<img *ngIf="loadingFPwd" class="pl-3" src="https://jj2hgq.ch.files.1drv.com/y4myOCN7C-uQ07zF_b5xgKmAiDSbf9RLfHdRd5HrNxVQTHq8tjiEPrhARdyZ6VC09qWcL51g0zN-o__FZLcjfYFyt3utAa73AZu3KtZjIVlFJ6dl1A1tOTIVZSjhjGlOTrD9r5qfJtwPMLWQ7dNpFxsSQ1uR28b1Oj9GHDnvhE1y_Zq3dztRh-SAm_aiFnNReRd_4XGRrRZfaCzKCefjkpO4w?width=591&height=591&cropmode=none" width="30" height="30"   alt=""/>
 					</div> <!-- form-group// -->
 				</form>
 			</article>
@@ -81,12 +82,16 @@
 					</div>
 						<div class="form-group">
 							<label>Your Lastname</label>
-							<input  class="form-control"  formControlName="lastname" placeholder="lastname"
-           >
-          	</div>
+							<input  class="form-control"  formControlName="lastname" placeholder="lastname"      [ngClass]="{ 'is-invalid': signupSubmitted && signupvar.lastname.errors }"
+        >
+							<div *ngIf="signupSubmitted && signupvar.lastname.errors" class="invalid-feedback">
+								<div *ngIf="signupvar.lastname.errors.required">Username is required</div>
+							</div>
+						</div>
 
-							<div class="form-group">
-								<button type="submit" class="btn btn-primary btn-block"> Signup </button>
+						<div class="form-group">
+							<button [disabled]="loadingSignup" type="submit" class="btn btn-primary btn-block"> Signup </button>
+							<img *ngIf="loadingSignup" class="pl-3" src="https://jj2hgq.ch.files.1drv.com/y4myOCN7C-uQ07zF_b5xgKmAiDSbf9RLfHdRd5HrNxVQTHq8tjiEPrhARdyZ6VC09qWcL51g0zN-o__FZLcjfYFyt3utAa73AZu3KtZjIVlFJ6dl1A1tOTIVZSjhjGlOTrD9r5qfJtwPMLWQ7dNpFxsSQ1uR28b1Oj9GHDnvhE1y_Zq3dztRh-SAm_aiFnNReRd_4XGRrRZfaCzKCefjkpO4w?width=591&height=591&cropmode=none" width="30" height="30"   alt=""/>
 							</div> <!-- form-group// -->
 				</form>
 			</article>

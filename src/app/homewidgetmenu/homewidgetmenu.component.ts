@@ -27,7 +27,10 @@ export class HomewidgetmenuComponent implements OnInit {
   showForgotPwdPage = false;
   showSignupPwdPage = false;
   page: string;
-  loading = false;
+
+  loadingLogin = false;
+  loadingSignup = false;
+  loadingFPwd = false;
 
   constructor(
     @Inject(FormBuilder)
@@ -74,7 +77,7 @@ export class HomewidgetmenuComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-    this.loading = true;
+    this.loadingLogin = true;
     this.authenticationService
       .login(this.loginvar.username.value, this.loginvar.password.value)
       .pipe(first())
@@ -83,7 +86,7 @@ export class HomewidgetmenuComponent implements OnInit {
           this.router.navigate(["dashboard"]);
         },
         error => {
-          this.loading = false;
+          this.loadingLogin = false;
           this.router.navigate(["dashboard"]);
         }
       );
@@ -100,6 +103,8 @@ export class HomewidgetmenuComponent implements OnInit {
     if (this.signupForm.invalid) {
       return;
     }
+    this.loadingSignup = true;
+    this.router.navigate(["dashboard"]);
   }
 
   /**
@@ -113,6 +118,8 @@ export class HomewidgetmenuComponent implements OnInit {
     if (this.fPwdForm.invalid) {
       return;
     }
+    this.loadingFPwd = true;
+    this.router.navigate(["dashboard"]);
   }
 
   /**
@@ -126,6 +133,8 @@ export class HomewidgetmenuComponent implements OnInit {
       this.showSignupPwdPage = false;
       this.signupSubmitted = false;
       this.loginSubmitted = false;
+      this.loadingLogin = false;
+      this.loadingSignup = false;
     }
     if (this.page == "login") {
       this.showLoginPage = true;
@@ -133,6 +142,8 @@ export class HomewidgetmenuComponent implements OnInit {
       this.showSignupPwdPage = false;
       this.signupSubmitted = false;
       this.fPwdSubmitted = false;
+      this.loadingFPwd = false;
+      this.loadingSignup = false;
     }
     if (this.page == "signup") {
       this.showLoginPage = false;
@@ -140,6 +151,8 @@ export class HomewidgetmenuComponent implements OnInit {
       this.showSignupPwdPage = true;
       this.loginSubmitted = false;
       this.fPwdSubmitted = false;
+      this.loadingLogin = false;
+      this.loadingFPwd = false;
     }
   }
 }
