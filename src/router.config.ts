@@ -5,7 +5,7 @@ import { DashboardComponent } from "./app/dashboard/dashboard.component";
 import { MenuComponent } from "./app/menu/menu.component";
 import { DashboardwidgetComponent } from "./app/dashboardwidget/dashboardwidget.component";
 import { HomewidgetmenuComponent } from "./app/homewidgetmenu/homewidgetmenu.component";
-import { ManageuserComponent } from './app/manageuser/manageuser.component';
+import { HomecontentComponent } from './app/homecontent/homecontent.component';
 
 export const routerConfig: Routes = [
   {
@@ -18,7 +18,7 @@ export const routerConfig: Routes = [
       },
       {
         path: ":id",
-        component: ManageuserComponent
+        component: HomecontentComponent
       },
       {
         path: "",
