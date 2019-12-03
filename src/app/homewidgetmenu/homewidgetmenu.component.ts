@@ -7,6 +7,8 @@ import {
   Validators,
   FormControl
 } from "@angular/forms";
+import { first } from "rxjs/operators";
+import { AuthenticationService } from "../service/authentication.service";
 
 @Component({
   selector: "app-homewidgetmenu",
@@ -20,12 +22,15 @@ export class HomewidgetmenuComponent implements OnInit {
   showForgotPwdPage = false;
   showSignupPwdPage = false;
   page: string;
+  loading = false;
 
   constructor(
     @Inject(FormBuilder)
     private formBuilder: FormBuilder,
     @Inject(Router) private router: Router,
-    @Inject(ActivatedRoute) private route: ActivatedRoute
+    @Inject(ActivatedRoute) private route: ActivatedRoute,
+    @Inject(AuthenticationService)
+    private authenticationService: AuthenticationService
   ) {}
 
   ngOnInit() {
@@ -53,8 +58,17 @@ export class HomewidgetmenuComponent implements OnInit {
     console.log("This is username ", this.f.username.value);
     console.log("This is password ", this.f.password.value);
     console.log("This is onLogin -- returnUrl ", "dashboard");
-
-    this.router.navigate(["dashboard"]);
+    this.authenticationService
+      .login(this.f.username.value, this.f.password.value)
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.router.navigate(["dashboard"]);
+        },
+        error => {
+          this.loading = false;
+        }
+      );
   }
 
   navigate(path) {
