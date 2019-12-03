@@ -104,7 +104,14 @@ export class HomewidgetmenuComponent implements OnInit {
       return;
     }
     this.loadingSignup = true;
-    this.router.navigate(["dashboard"]);
+
+    /**
+     * Once service is called set the below parameters on success 
+     */
+    this.showLoginPage = true;
+    this.showSignupPwdPage = false;
+    this.loadingSignup = false;
+    
   }
 
   /**
@@ -119,7 +126,13 @@ export class HomewidgetmenuComponent implements OnInit {
       return;
     }
     this.loadingFPwd = true;
-    this.router.navigate(["dashboard"]);
+
+    /**
+     * Once service is called set the below parameters  on success 
+     */
+    this.showLoginPage = true;
+    this.showForgotPwdPage = false;
+    this.loadingFPwd = false;
   }
 
   /**
