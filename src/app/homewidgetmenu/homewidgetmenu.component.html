@@ -63,7 +63,7 @@
 			<article class="card-body">
 				<a (click)="navigate('login')" class="float-right btn btn-outline-primary">Login</a>
 				<h4 class="card-title mb-4 mt-1">Sign up</h4>
-				<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+				<form [formGroup]="signupForm" (ngSubmit)="onLogin()">
 					<div class="form-group">
 						<label>Your email</label>
 						<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"

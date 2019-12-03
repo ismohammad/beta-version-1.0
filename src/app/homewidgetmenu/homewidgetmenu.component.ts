@@ -17,6 +17,7 @@ import { AuthenticationService } from "../service/authentication.service";
 })
 export class HomewidgetmenuComponent implements OnInit {
   loginForm: FormGroup;
+  signupForm: FormGroup;
   submitted = false;
   showLoginPage = true;
   showForgotPwdPage = false;
@@ -44,12 +45,16 @@ export class HomewidgetmenuComponent implements OnInit {
       username: ["", Validators.required],
       password: ["", Validators.required]
     });
+    this.signupForm = new FormGroup({
+      username: new FormControl(),
+      firstname: new FormControl(),
+      lastname: new FormControl()
+    });
     console.log("This is username return URL ", "HomewidgetmenuComponent");
   }
   get f() {
     return this.loginForm.controls;
   }
-
   /**
    * This method calls authenticationService login mething to submit the login details
    */
@@ -79,6 +84,7 @@ export class HomewidgetmenuComponent implements OnInit {
    */
   navigate(path) {
     this.page = path;
+    console.log("this.loginForm", this.signupForm);
     if (this.page == "fwdpage") {
       this.showLoginPage = false;
       this.showForgotPwdPage = true;
@@ -91,6 +97,7 @@ export class HomewidgetmenuComponent implements OnInit {
     }
     if (this.page == "signup") {
       console.log("path122", path);
+
       this.showLoginPage = false;
       this.showForgotPwdPage = false;
       this.showSignupPwdPage = true;
