@@ -6,11 +6,11 @@
 			<article class="card-body">
 				<a (click)="navigate('signup')" class="float-right btn btn-outline-primary">Sign up</a>
 				<h4 class="card-title mb-4 mt-1">Sign in</h4>
-				<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+				<form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
 					<div class="form-group">
 						<label>Your email</label>
 						<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
-        >
+            >
 						<div *ngIf="submitted && f.username.errors" class="invalid-feedback">
 							<div *ngIf="f.username.errors.required">Username is required</div>
 						</div>

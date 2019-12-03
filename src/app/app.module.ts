@@ -13,12 +13,14 @@ import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.comp
 import { ManageuserComponent } from "./manageuser/manageuser.component";
 import { HomecontentComponent } from "./homecontent/homecontent.component";
 import { AuthenticationService } from './service/authentication.service';
+import { HttpClientModule  } from "@angular/common/http";
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routerConfig)
   ],
   declarations: [

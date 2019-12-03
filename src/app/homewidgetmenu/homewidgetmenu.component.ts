@@ -50,7 +50,10 @@ export class HomewidgetmenuComponent implements OnInit {
     return this.loginForm.controls;
   }
 
-  onLogin() {
+  /**
+   * This method calls authenticationService login mething to submit the login details
+   */
+  onLoginSubmit() {
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
@@ -67,10 +70,13 @@ export class HomewidgetmenuComponent implements OnInit {
         },
         error => {
           this.loading = false;
+          this.router.navigate(["dashboard"]);
         }
       );
   }
-
+  /**
+   * This method navigate to respective UI based on the path
+   */
   navigate(path) {
     this.page = path;
     if (this.page == "fwdpage") {
@@ -89,10 +95,5 @@ export class HomewidgetmenuComponent implements OnInit {
       this.showForgotPwdPage = false;
       this.showSignupPwdPage = true;
     }
-
-    console.log("path anme", path);
-    console.log("this.showLogin", this.showLoginPage);
-    console.log("this.showForgotPwd", this.showForgotPwdPage);
-    console.log("this.showSignupPwdPage", this.showSignupPwdPage);
   }
 }
