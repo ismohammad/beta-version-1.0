@@ -9,6 +9,7 @@ import {
 } from "@angular/forms";
 import { first } from "rxjs/operators";
 import { AuthenticationService } from "../service/authentication.service";
+import { HomeComponent } from "../home/home.component";
 
 @Component({
   selector: "app-homewidgetmenu",
@@ -38,7 +39,9 @@ export class HomewidgetmenuComponent implements OnInit {
     @Inject(Router) private router: Router,
     @Inject(ActivatedRoute) private route: ActivatedRoute,
     @Inject(AuthenticationService)
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    @Inject(HomeComponent)
+    private homecomponent: HomeComponent
   ) {}
 
   ngOnInit() {
@@ -78,6 +81,7 @@ export class HomewidgetmenuComponent implements OnInit {
       return;
     }
     this.loadingLogin = true;
+    this.homecomponent.showSpinner();
     this.authenticationService
       .login(this.loginvar.username.value, this.loginvar.password.value)
       .pipe(first())
@@ -106,12 +110,11 @@ export class HomewidgetmenuComponent implements OnInit {
     this.loadingSignup = true;
 
     /**
-     * Once service is called set the below parameters on success 
+     * Once service is called set the below parameters on success
      */
     this.showLoginPage = true;
     this.showSignupPwdPage = false;
     this.loadingSignup = false;
-    
   }
 
   /**
@@ -128,7 +131,7 @@ export class HomewidgetmenuComponent implements OnInit {
     this.loadingFPwd = true;
 
     /**
-     * Once service is called set the below parameters  on success 
+     * Once service is called set the below parameters  on success
      */
     this.showLoginPage = true;
     this.showForgotPwdPage = false;
