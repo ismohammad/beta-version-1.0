@@ -24,9 +24,9 @@
 							<div *ngIf="loginvar.password.errors.required">Password is required</div>
 						</div>
 					</div> <!-- form-group// -->
-		 			<div class="form-group">
-						<button [disabled]="loadingLogin" type="submit" class="btn btn-primary btn-block"> Login  </button>
-						<img *ngIf="loadingLogin" src="https://cdn.glitch.com/0e4d1ff3-5897-47c5-9711-d026c01539b8%2Fbddfd6e4434f42662b009295c9bab86e.gif?v=1573157191712" width="50" height="50"   alt=""/>
+					<div class="form-group">
+						<button  type="submit" class="btn btn-primary btn-block"> Login  </button>
+
 					</div> <!-- form-group// -->
 				</form>
 			</article>
@@ -51,8 +51,8 @@
 					</div> <!-- form-group// -->
 
 					<div class="form-group">
-						<button [disabled]="loadingFPwd" type="submit" class="btn btn-primary btn-block"> Reset  </button>
-						<img *ngIf="loadingFPwd" class="pl-3" src="https://mz2hgq.ch.files.1drv.com/y4m2jeHHIuNPBE-IV5WDdQv5TOCbq55-lzLylma-ZVOueanxbnUly0bMBuXV0yTa5fXJSVS1Nw3rSqvJ359kaRq0wa1QPwCX0aCxJgDKmyVxqd2zuenewsM6PTAMGIbY3ayc8nvQdii9AYxtlJfXoxgI8jsRKfFbTFH9wyBFQuENzljJknCgXa69KxCfBA5Vicd0-vceCXYHw6opeuz-g41Xw?width=200&height=200&cropmode=none" width="30" height="30"   alt=""/>
+						<button [type="submit" class="btn btn-primary btn-block"> Reset  </button>
+
 					</div> <!-- form-group// -->
 				</form>
 			</article>
@@ -90,9 +90,9 @@
 						</div>
 
 						<div class="form-group">
-							<button [disabled]="loadingSignup" type="submit" class="btn btn-primary btn-block"> Signup </button>
-							<img *ngIf="loadingSignup" class="pl-3" src="https://mz2hgq.ch.files.1drv.com/y4m2jeHHIuNPBE-IV5WDdQv5TOCbq55-lzLylma-ZVOueanxbnUly0bMBuXV0yTa5fXJSVS1Nw3rSqvJ359kaRq0wa1QPwCX0aCxJgDKmyVxqd2zuenewsM6PTAMGIbY3ayc8nvQdii9AYxtlJfXoxgI8jsRKfFbTFH9wyBFQuENzljJknCgXa69KxCfBA5Vicd0-vceCXYHw6opeuz-g41Xw?width=200&height=200&cropmode=none" width="30" height="30"   alt=""/>
-							</div> <!-- form-group// -->
+							<button  type="submit" class="btn btn-primary btn-block"> Signup </button>
+
+						</div> <!-- form-group// -->
 				</form>
 			</article>
 		</div>
