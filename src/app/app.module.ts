@@ -14,6 +14,7 @@ import { ManageuserComponent } from "./manageuser/manageuser.component";
 import { HomecontentComponent } from "./homecontent/homecontent.component";
 import { AuthenticationService } from './service/authentication.service';
 import { HttpClientModule  } from "@angular/common/http";
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { HttpClientModule  } from "@angular/common/http";
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routerConfig)
+    RouterModule.forRoot(routerConfig),
+    Ng4LoadingSpinnerModule.forRoot()
   ],
   declarations: [
     AppComponent,
