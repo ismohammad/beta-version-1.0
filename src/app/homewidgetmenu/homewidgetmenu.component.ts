@@ -29,10 +29,6 @@ export class HomewidgetmenuComponent implements OnInit {
   showSignupPwdPage = false;
   page: string;
 
-  loadingLogin = false;
-  loadingSignup = false;
-  loadingFPwd = false;
-
   constructor(
     @Inject(FormBuilder)
     private formBuilder: FormBuilder,
@@ -80,7 +76,6 @@ export class HomewidgetmenuComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-    this.loadingLogin = true;
     this.homecomponent.showSpinner();
     this.authenticationService
       .login(this.loginvar.username.value, this.loginvar.password.value)
@@ -90,7 +85,6 @@ export class HomewidgetmenuComponent implements OnInit {
           this.router.navigate(["dashboard"]);
         },
         error => {
-          this.loadingLogin = false;
           this.router.navigate(["dashboard"]);
         }
       );
@@ -107,14 +101,12 @@ export class HomewidgetmenuComponent implements OnInit {
     if (this.signupForm.invalid) {
       return;
     }
-    this.loadingSignup = true;
-
     /**
      * Once service is called set the below parameters on success
      */
+    this.homecomponent.showSpinner();
     this.showLoginPage = true;
     this.showSignupPwdPage = false;
-    this.loadingSignup = false;
   }
 
   /**
@@ -128,14 +120,12 @@ export class HomewidgetmenuComponent implements OnInit {
     if (this.fPwdForm.invalid) {
       return;
     }
-    this.loadingFPwd = true;
-
     /**
      * Once service is called set the below parameters  on success
      */
+    this.homecomponent.showSpinner();
     this.showLoginPage = true;
     this.showForgotPwdPage = false;
-    this.loadingFPwd = false;
   }
 
   /**
@@ -149,8 +139,6 @@ export class HomewidgetmenuComponent implements OnInit {
       this.showSignupPwdPage = false;
       this.signupSubmitted = false;
       this.loginSubmitted = false;
-      this.loadingLogin = false;
-      this.loadingSignup = false;
     }
     if (this.page == "login") {
       this.showLoginPage = true;
@@ -158,8 +146,6 @@ export class HomewidgetmenuComponent implements OnInit {
       this.showSignupPwdPage = false;
       this.signupSubmitted = false;
       this.fPwdSubmitted = false;
-      this.loadingFPwd = false;
-      this.loadingSignup = false;
     }
     if (this.page == "signup") {
       this.showLoginPage = false;
@@ -167,8 +153,6 @@ export class HomewidgetmenuComponent implements OnInit {
       this.showSignupPwdPage = true;
       this.loginSubmitted = false;
       this.fPwdSubmitted = false;
-      this.loadingLogin = false;
-      this.loadingFPwd = false;
     }
   }
 }
