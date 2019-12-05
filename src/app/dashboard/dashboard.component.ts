@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: "app-dashboard",
+  templateUrl: "./dashboard.component.html",
+  styleUrls: ["./dashboard.component.css"]
 })
 export class DashboardComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-        console.log("Inside DashboardComponent");
-
+  id: string;
+  constructor(route: ActivatedRoute) {
+    route.params.subscribe(params => (this.id = params["id"]));
   }
 
+  ngOnInit() {
+    console.log("Inside DashboardComponent");
+  }
 }
