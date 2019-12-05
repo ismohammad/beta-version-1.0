@@ -13,8 +13,7 @@ export class MenuComponent implements OnInit {
     console.log("MenuComponent");
   }
   navigate(path) {
-    console.log("pathMenu", path);
-    this.router.navigate([{ outlets: { primary: path} }], {
+    this.router.navigate([{ outlets: { primary: path } }], {
       relativeTo: this.route
     });
   }

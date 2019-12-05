@@ -79,7 +79,7 @@
 						<input class="form-control" placeholder="Password" type="password" formControlName="signup_password"[ngClass]="{ 'is-invalid': signupSubmitted && signupvar.signup_password.errors }" />
 						<div *ngIf="signupSubmitted && signupvar.signup_password.errors" class="invalid-feedback">
 							<div *ngIf="signupvar.signup_password.errors.required">Password is required</div>
-              <div *ngIf="signupvar.signup_password.errors.minlength">Password must be at least 6</div>
+              <div *ngIf="signupvar.signup_password.errors.minlength">Password min least 6 char</div>
           </div>
           </div>
 
