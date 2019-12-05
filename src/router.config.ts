@@ -46,7 +46,7 @@ export const routerConfig: Routes = [
       {
         path: "",
         outlet: "sidemenu",
-        component: MenuComponent,
+        component: MenuComponent
       }
     ]
   },
@@ -61,7 +61,7 @@ export const routerConfig: Routes = [
       {
         path: "",
         outlet: "sidemenu",
-        component: MenuComponent,
+        component: MenuComponent
       }
     ]
   },
@@ -77,11 +77,11 @@ export const routerConfig: Routes = [
       {
         path: "",
         outlet: "sidemenu",
-        component: MenuComponent,
+        component: MenuComponent
       }
     ]
   },
-    {
+  {
     path: "item_3/:id",
     component: DashboardComponent,
     children: [
@@ -92,7 +92,7 @@ export const routerConfig: Routes = [
       {
         path: "",
         outlet: "sidemenu",
-        component: MenuComponent,
+        component: MenuComponent
       }
     ]
   },
@@ -100,10 +100,10 @@ export const routerConfig: Routes = [
     path: "",
     redirectTo: "/home",
     pathMatch: "full"
-  }
-  /* {
+  },
+  {
     path: "**",
     redirectTo: "/home",
     pathMatch: "full"
-  }*/
+  }
 ];
