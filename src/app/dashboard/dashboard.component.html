@@ -21,13 +21,15 @@
 					</div>
 				</div>
 			</div>
+      
+      <div *ngIf="id">
 			<div class="sectionMargin">
 				<!--Grid column-->
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item "><a routerLink="/dashboard">Dashboard</a></li>
 					<li class="breadcrumb-item active">
 						<span *ngIf="id==='1'">
-          photography
+          photography 
       </span>
 						<span *ngIf="id==='2'">
           health
@@ -39,6 +41,7 @@
 					</li>
 				</ol>
 			</div>
+      </div>
 			<router-outlet></router-outlet>
 		</div>
 		<router-outlet name="sidemenu"></router-outlet>
