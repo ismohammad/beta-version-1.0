@@ -12,9 +12,4 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     console.log("MenuComponent");
   }
-  navigate(path) {
-    this.router.navigate([{ outlets: { primary: path } }], {
-      relativeTo: this.route
-    });
-  }
 }

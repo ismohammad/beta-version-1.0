@@ -1,8 +1,8 @@
 <div class="col-sm-18 col-xs-10 sidebar-offcanvas" id="sidebar">
 	<div class="list-group">
-		<a  (click)="navigate('Photography')" class="list-group-item">Photography</a>
-		<a  (click)="navigate('Health')" class="list-group-item">Health and Fitness Photography</a>
-		<a   (click)="navigate('Music')" class="list-group-item">Music</a>
+		<a [routerLink]="['/item_1', 1]" class="list-group-item">Photography</a>
+		<a [routerLink]="['/item_2', 2]" class="list-group-item">Health and Fitness Photography</a>
+		<a [routerLink]="['/item_3', 3]"   class="list-group-item">Music</a>
 		<a routerLink="/home" class="btn btn-primary">Logout</a>
 	</div>
 </div>

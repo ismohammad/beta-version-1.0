@@ -67,7 +67,7 @@
 				<h4 class="card-title mb-4 mt-1">Sign up</h4>
 				<form [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()">
 					<div class="form-group">
-						<label>Your email</label>
+						<label>Your email*</label>
 						<input  class="form-control"  formControlName="signup_username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': signupSubmitted && signupvar.signup_username.errors }"
         >
 						<div *ngIf="signupSubmitted && signupvar.signup_username.errors" class="invalid-feedback">
@@ -75,7 +75,7 @@
 						</div>
 					</div> <!-- form-group// -->
           <div class="form-group">
-          	<label>Your password</label>
+          	<label>Your password*</label>
 						<input class="form-control" placeholder="Password" type="password" formControlName="signup_password"[ngClass]="{ 'is-invalid': signupSubmitted && signupvar.signup_password.errors }" />
 						<div *ngIf="signupSubmitted && signupvar.signup_password.errors" class="invalid-feedback">
 							<div *ngIf="signupvar.signup_password.errors.required">Password is required</div>
@@ -89,11 +89,11 @@
             >
 					</div>
 						<div class="form-group">
-							<label>Your Lastname</label>
+							<label>Your Lastname*</label>
 							<input  class="form-control"  formControlName="lastname" placeholder="LastName"      [ngClass]="{ 'is-invalid': signupSubmitted && signupvar.lastname.errors }"
         >
 							<div *ngIf="signupSubmitted && signupvar.lastname.errors" class="invalid-feedback">
-								<div *ngIf="signupvar.lastname.errors.required">Username is required</div>
+								<div *ngIf="signupvar.lastname.errors.required">Lastname is required</div>
 							</div>
 						</div>
 

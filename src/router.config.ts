@@ -42,27 +42,67 @@ export const routerConfig: Routes = [
         path: "",
         component: DashboardwidgetComponent
       },
-        
       {
-        path: ":id",
+        path: "",
+        outlet: "sidemenu",
+        component: MenuComponent,
+      }
+    ]
+  },
+  {
+    path: "item_1/:id",
+    component: DashboardComponent,
+    children: [
+      {
+        path: "",
         component: DashboardcontentComponent
       },
       {
         path: "",
         outlet: "sidemenu",
-        component: MenuComponent
+        component: MenuComponent,
       }
     ]
   },
-   
+
+  {
+    path: "item_2/:id",
+    component: DashboardComponent,
+    children: [
+      {
+        path: "",
+        component: DashboardcontentComponent
+      },
+      {
+        path: "",
+        outlet: "sidemenu",
+        component: MenuComponent,
+      }
+    ]
+  },
+    {
+    path: "item_3/:id",
+    component: DashboardComponent,
+    children: [
+      {
+        path: "",
+        component: DashboardcontentComponent
+      },
+      {
+        path: "",
+        outlet: "sidemenu",
+        component: MenuComponent,
+      }
+    ]
+  },
   {
     path: "",
     redirectTo: "/home",
     pathMatch: "full"
-  },
- {
+  }
+  /* {
     path: "**",
     redirectTo: "/home",
     pathMatch: "full"
-  }
-]
+  }*/
+];

@@ -2,13 +2,23 @@
 	<!--Grid column-->
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item "><a routerLink="/dashboard">Dashboard</a></li>
-		<li class="breadcrumb-item active">{{id}}</li>
+		<li class="breadcrumb-item active">
+			<span *ngIf="id==='1'">
+          Photography
+      </span>
+			<span *ngIf="id==='2'">
+          Health
+      </span>
+			<span *ngIf="id==='3'">
+          Music
+      </span>
+
+		</li>
 	</ol>
 </div>
-
-<div *ngIf="photography">
+<div *ngIf="id==='1'">
 	<p>
-		manageuser works!This is a list of course categories, click on each to see a list of courses for a given
+		photography works!This is a list of course categories, click on each to see a list of courses for a given
 		category.This is a list of course categories, click on each to sek on each to see a list of courses for
 		a given category.This is a list of course categories, click on each to see a list of courses for a given
 		category.This is a list of course categories, click on each to see a list of courses for a given category.This
@@ -18,9 +28,9 @@
 	</p>
 </div>
 
-<div *ngIf="health">
+<div *ngIf="id==='2'">
 	<p>
-		manageuser works!This is a list of course categories, click on each to see a list of courses for a given
+		health works!This is a list of course categories, click on each to see a list of courses for a given
 		category.This is a list of course categories, click on each to sek on each to see a list of courses for
 		a given category.This is a list of course categories, click on each to see a list of courses for a given
 		category.This is a list of course categories, click on each to see a list of courses for a given category.This
@@ -30,9 +40,9 @@
 	</p>
 </div>
 
-<div *ngIf="music">
+<div *ngIf="id==='3'">
 	<p>
-		manageuser works!This is a list of course categories, click on each to see a list of courses for a given
+		music works!This is a list of course categories, click on each to see a list of courses for a given
 		category.This is a list of course categories, click on each to sek on each to see a list of courses for
 		a given category.This is a list of course categories, click on each to see a list of courses for a given
 		category.This is a list of course categories, click on each to see a list of courses for a given category.This
