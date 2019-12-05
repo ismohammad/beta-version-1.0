@@ -21,27 +21,27 @@
 					</div>
 				</div>
 			</div>
-      
-      <div *ngIf="id">
-			<div class="sectionMargin">
-				<!--Grid column-->
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item "><a routerLink="/dashboard">Dashboard</a></li>
-					<li class="breadcrumb-item active">
-						<span *ngIf="id==='1'">
+
+			<div *ngIf="id">
+				<div class="sectionMargin">
+					<!--Grid column-->
+					<ol class="breadcrumb" style="background-color: #e3f2fd;">
+						<li class="breadcrumb-item "><a routerLink="/dashboard">Dashboard</a></li>
+						<li class="breadcrumb-item active">
+							<span *ngIf="id==='1'">
           photography 
       </span>
-						<span *ngIf="id==='2'">
+							<span *ngIf="id==='2'">
           health
       </span>
-						<span *ngIf="id==='3'">
+							<span *ngIf="id==='3'">
           music
       </span>
 
-					</li>
-				</ol>
+						</li>
+					</ol>
+				</div>
 			</div>
-      </div>
 			<router-outlet></router-outlet>
 		</div>
 		<router-outlet name="sidemenu"></router-outlet>
