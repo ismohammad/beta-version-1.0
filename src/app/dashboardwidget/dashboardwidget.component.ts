@@ -10,6 +10,7 @@ export class DashboardwidgetComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { 
+    DashboardwidgetComponent
   }
 
 }

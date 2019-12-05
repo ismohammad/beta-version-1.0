@@ -5,8 +5,9 @@ import { DashboardComponent } from "./app/dashboard/dashboard.component";
 import { MenuComponent } from "./app/menu/menu.component";
 import { DashboardwidgetComponent } from "./app/dashboardwidget/dashboardwidget.component";
 import { HomewidgetmenuComponent } from "./app/homewidgetmenu/homewidgetmenu.component";
-import { HomecontentComponent } from './app/homecontent/homecontent.component';
-import { ForgotpwdComponent } from './app/forgotpwd/forgotpwd.component';
+import { HomecontentComponent } from "./app/homecontent/homecontent.component";
+import { ForgotpwdComponent } from "./app/forgotpwd/forgotpwd.component";
+import { DashboardcontentComponent } from "./app/dashboardcontent/dashboardcontent.component";
 
 export const routerConfig: Routes = [
   {
@@ -30,7 +31,7 @@ export const routerConfig: Routes = [
         path: ":id",
         outlet: "homemenu",
         component: HomewidgetmenuComponent
-      }      
+      }
     ]
   },
   {
@@ -41,22 +42,35 @@ export const routerConfig: Routes = [
         path: "",
         component: DashboardwidgetComponent
       },
-      
+       {
+        path: ":id",
+        outlet: "sidemenu",
+        component: MenuComponent
+      },
+      {
+        path: ":id",
+        component: DashboardcontentComponent
+      },
       {
         path: "",
         outlet: "sidemenu",
         component: MenuComponent
       }
+     
     ]
   },
+   {
+    path: "dashboard/:id",
+     
+   },
   {
     path: "",
     redirectTo: "/home",
     pathMatch: "full"
   },
-  {
+  /*{
     path: "**",
     redirectTo: "/home",
     pathMatch: "full"
-  }
-];
+  }*/
+]

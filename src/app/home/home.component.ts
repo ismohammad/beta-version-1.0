@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   constructor(private spinnerService: Ng4LoadingSpinnerService) {}
 
   ngOnInit() {
-    console.log("this is testing", "test");
+    console.log("this is HomeComponent");
   }
   showSpinner() {
     this.spinnerService.show();

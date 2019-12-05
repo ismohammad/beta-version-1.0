@@ -15,6 +15,7 @@ import { HomecontentComponent } from "./homecontent/homecontent.component";
 import { AuthenticationService } from './service/authentication.service';
 import { HttpClientModule  } from "@angular/common/http";
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
+import { DashboardcontentComponent } from './dashboardcontent/dashboardcontent.component';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
     HomewidgetmenuComponent,
     DashboardwidgetComponent,
     ManageuserComponent,
-    HomecontentComponent
+    HomecontentComponent,
+    DashboardcontentComponent
   ],
   bootstrap: [AppComponent],
   providers: [AuthenticationService]

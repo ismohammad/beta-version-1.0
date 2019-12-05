@@ -11,7 +11,6 @@ export class HomewidgetComponent {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   navigate(path) {
-    console.log("path",path);
     this.router.navigate([{ outlets: { primary: path, homemenu: path } }], {
       relativeTo: this.route
     });
