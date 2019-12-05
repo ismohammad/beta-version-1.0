@@ -14,8 +14,7 @@ export class MenuComponent implements OnInit {
   }
   navigate(path) {
     console.log("pathMenu", path);
-     console.log("this.route", this.route);
-    this.router.navigate([{ outlets: { primary: "dashboard/:"+path, sidemenu: path } }], {
+    this.router.navigate([{ outlets: { primary: path} }], {
       relativeTo: this.route
     });
   }

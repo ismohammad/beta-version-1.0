@@ -42,11 +42,7 @@ export const routerConfig: Routes = [
         path: "",
         component: DashboardwidgetComponent
       },
-       {
-        path: ":id",
-        outlet: "sidemenu",
-        component: MenuComponent
-      },
+        
       {
         path: ":id",
         component: DashboardcontentComponent
@@ -56,21 +52,17 @@ export const routerConfig: Routes = [
         outlet: "sidemenu",
         component: MenuComponent
       }
-     
     ]
   },
-   {
-    path: "dashboard/:id",
-     
-   },
+   
   {
     path: "",
     redirectTo: "/home",
     pathMatch: "full"
   },
-  /*{
+ {
     path: "**",
     redirectTo: "/home",
     pathMatch: "full"
-  }*/
+  }
 ]
