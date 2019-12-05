@@ -53,7 +53,7 @@ export class HomewidgetmenuComponent implements OnInit {
   }
   setSignupForm() {
     this.signupForm = this.formBuilder.group({
-      //signup_username: ["", [Validators.required, Validators.minLength(6)]],
+      signup_password: ["", [Validators.required, Validators.minLength(6)]],
       signup_username: ["", Validators.required],
       firstname: new FormControl(),
       lastname: ["", Validators.required]
