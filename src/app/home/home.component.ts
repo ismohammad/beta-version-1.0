@@ -8,12 +8,14 @@ import { Ng4LoadingSpinnerService } from "ng4-loading-spinner";
 })
 export class HomeComponent implements OnInit {
   constructor(private spinnerService: Ng4LoadingSpinnerService) {}
-
+  successMsg = false;
+  errorMsg = false;
+  
   ngOnInit() {
     console.log("this is HomeComponent");
   }
   showSpinner() {
     this.spinnerService.show();
-    setTimeout(()=>this.spinnerService.hide(),3000)
+    setTimeout(() => this.spinnerService.hide(), 3000);
   }
 }
