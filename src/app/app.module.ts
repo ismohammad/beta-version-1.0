@@ -16,7 +16,7 @@ import { AuthenticationService } from './service/authentication.service';
 import { HttpClientModule  } from "@angular/common/http";
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { DashboardcontentComponent } from './dashboardcontent/dashboardcontent.component';
-import { AlertComponent } from './dashboard/alert/alert.component';
+import { AlertComponent } from './alert/alert.component';
 import { AlertService } from './service/alert.service';
 
 @NgModule({
