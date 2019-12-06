@@ -105,10 +105,9 @@ export class HomewidgetmenuComponent implements OnInit {
      * Once service is called set the below parameters on success
      */
     console.log("this s onSignupSubmit");
-    
+    this.homecomponent.showSpinner();
     this.showLoginPage = true;
     this.showSignupPwdPage = false;
-     this.router.navigate(["dashboard"]);
   }
 
   /**
