@@ -6,7 +6,7 @@ main {
 } 
 body {
   background: url('https://jz2hgq.ch.files.1drv.com/y4mZ_541RUjn7W-N-7UX2Hy1SdJKizEItcN76TPSXwA0ZnvhqHTdGsguf7FhNbUXXzg_VBXZGpZA574p4eiRPk0CF62Gc-I6HIhHMZ4NCyAdgitoCd_9kfGOkwAgH4P2Stlzw3gYn5l0XewvskUEgoDck8ZhPhMaFUX7RSHOBEdr9zgB1ed2jIjT7LFZ5NCeOzkSrujIP2qqg69B4B8u_LZIA?width=800&height=449&cropmode=none');
-  background-repeat: no-repeat; background-size: cover;  
+  background-repeat: no-repeat; background-size: cover; background-attachment: fixed; 
 }
  
 .navbar:not(.top-nav-collapse) {
