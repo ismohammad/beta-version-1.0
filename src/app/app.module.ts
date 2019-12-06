@@ -16,6 +16,8 @@ import { AuthenticationService } from './service/authentication.service';
 import { HttpClientModule  } from "@angular/common/http";
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { DashboardcontentComponent } from './dashboardcontent/dashboardcontent.component';
+import { AlertComponent } from './dashboard/alert/alert.component';
+import { AlertService } from './service/alert.service';
 
 @NgModule({
   imports: [
@@ -36,9 +38,10 @@ import { DashboardcontentComponent } from './dashboardcontent/dashboardcontent.c
     DashboardwidgetComponent,
     ManageuserComponent,
     HomecontentComponent,
-    DashboardcontentComponent
+    DashboardcontentComponent,
+    AlertComponent
   ],
   bootstrap: [AppComponent],
-  providers: [AuthenticationService]
+  providers: [AuthenticationService, AlertService]
 })
 export class AppModule {}
