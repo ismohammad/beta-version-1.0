@@ -14,6 +14,6 @@ export class HomeComponent implements OnInit {
   }
   showSpinner() {
     this.spinnerService.show();
-    //setTimeout(()=>this.spinnerService.hide(),3000)
+    setTimeout(()=>this.spinnerService.hide(),3000)
   }
 }

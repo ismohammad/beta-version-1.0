@@ -4,7 +4,7 @@
 	<div *ngIf="showLoginPage">
 		<div class="card">
 			<article class="card-body">
-			
+
 				<h4 class="card-title mb-4 mt-1">Login</h4>
 				<form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
 					<div class="form-group">
@@ -16,8 +16,8 @@
 						</div>
 					</div> <!-- form-group// -->
 					<div class="form-group">
-				 	
-						<label>Password</label> 
+
+						<label>Password</label>
 						<input class="form-control" placeholder="YOUR PASSWORD" type="password" formControlName="password"[ngClass]="{ 'is-invalid': loginSubmitted && loginvar.password.errors }" />
 						<div *ngIf="loginSubmitted && loginvar.password.errors" class="invalid-feedback">
 							<div *ngIf="loginvar.password.errors.required">Password is required</div>
@@ -25,14 +25,16 @@
 					</div> <!-- form-group// -->
 					<div class="form-group">
 						<button  type="submit" class="btn btn-primary "> Login  </button>
-            <a (click)="navigate('fwdpage')" class="float-right btn btn-outline-primary btn-sm"
-							 >Forgot Password?</a>
+						<a (click)="navigate('fwdpage')" class="float-right btn btn-outline-primary btn-sm">Forgot
+							Password?</a>
 
 					</div> <!-- form-group// -->
-          	<div class="form-group">
-              	<a (click)="navigate('signup')" class="btn btn-outline-primary btn-sm">Do not have an account? SIGN UP</a>
-          
-          	</div>
+					<div class="form-group">
+						<a (click)="navigate('signup')" class="btn btn-outline-primary btn-sm" data-toggle="modal"
+							data-target="#exampleModalLong">Do not have an account?
+							SIGN UP</a>
+
+					</div>
 				</form>
 			</article>
 		</div>
@@ -44,11 +46,11 @@
 		<div class="card">
 			<article class="card-body">
 				<h4 class="card-title">Forgot Password</h4>
-         <p>
-        Don't worry, we can help!</p>
+				<p>
+					Don't worry, we can help!</p>
 				<form [formGroup]="fPwdForm" (ngSubmit)="onForgetPasswordSubmit()">
 					<div class="form-group">
-					
+
 						<input  class="form-control"  formControlName="fPwdForm_username" placeholder="EMAIL ADDRESS" type="email" [ngClass]="{ 'is-invalid': fPwdSubmitted && fPwdvar.fPwdForm_username.errors }"
         >
 						<div *ngIf="fPwdSubmitted && fPwdvar.fPwdForm_username.errors" class="invalid-feedback">
@@ -59,57 +61,74 @@
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary "> SEND PASSWORD  </button>
 					</div> <!-- form-group// -->
-          <a (click)="navigate('login')" class="float-left btn btn-outline-primary">Back to LOGIN?</a>
+					<a (click)="navigate('login')" class="float-left btn btn-outline-primary">Back to LOGIN?</a>
 				</form>
 			</article>
 		</div>
 	</div>
+
 
 	<!-- Sign Up Page -->
-	<div *ngIf="showSignupPwdPage">
-		<div class="card">
-			<article class="card-body">
-				<a (click)="navigate('login')" class="float-right btn btn-outline-primary">Login</a>
-				<h4 class="card-title mb-4 mt-1">Sign up</h4>
-				<form [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()">
-					<div class="form-group">
-						<label>Your email*</label>
-						<input  class="form-control"  formControlName="signup_username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': signupSubmitted && signupvar.signup_username.errors }"
-        >
-						<div *ngIf="signupSubmitted && signupvar.signup_username.errors" class="invalid-feedback">
-							<div *ngIf="signupvar.signup_username.errors.required">Username is required</div>
-						</div>
-					</div> <!-- form-group// -->
-          <div class="form-group">
-          	<label>Your password*</label>
-						<input class="form-control" placeholder="Password" type="password" formControlName="signup_password"[ngClass]="{ 'is-invalid': signupSubmitted && signupvar.signup_password.errors }" />
-						<div *ngIf="signupSubmitted && signupvar.signup_password.errors" class="invalid-feedback">
-							<div *ngIf="signupvar.signup_password.errors.required">Password is required</div>
-              <div *ngIf="signupvar.signup_password.errors.minlength">Password min least 6 char</div>
-          </div>
-          </div>
-
-					<div class="form-group">
-						<label>Your Firstname</label>
-						<input  class="form-control"  formControlName="firstname" placeholder="FirstName"
-            >
+	<!-- Modal -->
+	<form [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()">
+		<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="exampleModalLongTitle">Sign up</h4>
 					</div>
-						<div class="form-group">
-							<label>Your Lastname*</label>
-							<input  class="form-control"  formControlName="lastname" placeholder="LastName"      [ngClass]="{ 'is-invalid': signupSubmitted && signupvar.lastname.errors }"
-        >
-							<div *ngIf="signupSubmitted && signupvar.lastname.errors" class="invalid-feedback">
-								<div *ngIf="signupvar.lastname.errors.required">Lastname is required</div>
+					<div class="modal-body">
+						<div *ngIf="showSignupPwdPage">
+							<div class="card">
+								<article class="card-body">
+									<div class="form-group">
+										<label>Your email*</label>
+										<input  class="form-control"  formControlName="signup_username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': signupSubmitted && signupvar.signup_username.errors }"
+                    >
+										<div *ngIf="signupSubmitted && signupvar.signup_username.errors"
+											class="invalid-feedback">
+											<div *ngIf="signupvar.signup_username.errors.required">Username is required
+											</div>
+										</div>
+									</div> <!-- form-group// -->
+									<div class="form-group">
+										<label>Your password*</label>
+										<input class="form-control" placeholder="Password" type="password" formControlName="signup_password"[ngClass]="{ 'is-invalid': signupSubmitted && signupvar.signup_password.errors }" />
+										<div *ngIf="signupSubmitted && signupvar.signup_password.errors"
+											class="invalid-feedback">
+											<div *ngIf="signupvar.signup_password.errors.required">Password is required
+											</div>
+											<div *ngIf="signupvar.signup_password.errors.minlength">Password min least 6
+												char</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label>Your Firstname</label>
+										<input  class="form-control"  formControlName="firstname" placeholder="FirstName"
+                    >
+		        			</div>
+										<div class="form-group">
+											<label>Your Lastname*</label>
+											<input  class="form-control"  formControlName="lastname" placeholder="LastName"      [ngClass]="{ 'is-invalid': signupSubmitted && signupvar.lastname.errors }"
+                       >
+											<div *ngIf="signupSubmitted && signupvar.lastname.errors"
+												class="invalid-feedback">
+												<div *ngIf="signupvar.lastname.errors.required">Lastname is required
+												</div>
+											</div>
+										</div>
+								</article>
 							</div>
 						</div>
-
-						<div class="form-group">
-							<button  type="submit" class="btn btn-primary btn-block"> Signup </button>
-
-						</div> <!-- form-group// -->
-				</form>
-			</article>
+					</div>
+					<div class="modal-footer">
+						<button type="button" (click)="navigate('login')"  class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-
+	</form>
 </div>
