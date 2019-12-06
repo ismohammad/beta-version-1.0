@@ -2,11 +2,6 @@
 	<div class="row mx-1">
 		<!--Grid column-->
 		<div class="col-md-8 mb-4">
-			<!--<ol class="breadcrumb">
-				<li class="breadcrumb-item "><a routerLink="/home">Home</a></li>
-				<li class="breadcrumb-item active">dashboard</li>
-			</ol>-->
-
 			<div class="card card-image">
 				<div class="text-white d-flex align-items-center rgba-black-strong py-5 px-4">
 					<div>
@@ -22,9 +17,8 @@
 				</div>
 			</div>
 
-			<div *ngIf="id">
+			<!--	<div *ngIf="id">
 				<div class="sectionMargin">
-					<!--Grid column-->
 					<ol class="breadcrumb" style="background-color: #e3f2fd;">
 						<li class="breadcrumb-item "><a routerLink="/dashboard">Dashboard</a></li>
 						<li class="breadcrumb-item active">
@@ -37,12 +31,13 @@
 							<span *ngIf="id==='3'">
           music
       </span>
-
 						</li>
 					</ol>
 				</div>
-			</div>
-			<router-outlet></router-outlet>
+			</div>-->
+      <div class="sectionMargin">
+      </div>
+			<router-outlet ></router-outlet>
 		</div>
 		<router-outlet name="sidemenu"></router-outlet>
 	</div>
