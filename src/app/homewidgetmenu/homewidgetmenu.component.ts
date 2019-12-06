@@ -21,7 +21,7 @@ export class HomewidgetmenuComponent implements OnInit {
   loginForm: FormGroup;
   signupForm: FormGroup;
   fPwdForm: FormGroup;
-
+  message: any;
   loginSubmitted = false;
   signupSubmitted = false;
   fPwdSubmitted = false;
@@ -86,7 +86,6 @@ export class HomewidgetmenuComponent implements OnInit {
         },
         error => {
           this.alertService.error(error);
-          this.router.navigate(["dashboard"]);
         }
       );
   }
