@@ -1,13 +1,19 @@
 <div class="sectionMargin">
 	<!--Grid column-->
+  <div class="card">
+  <div class="card-header">
 	<ol class="breadcrumb">
-		<li class="breadcrumb-item "><a routerLink="/home">Home</a></li>
-		<li class="breadcrumb-item active">{{id}}</li>
+		<li class="breadcrumb-item active" ><a routerLink="/home">
+    Home</a></li>
+		<li class="breadcrumb-item" >{{id}}</li>
 	</ol>
-</div>
+  </div>
+
+	
 
 <div *ngIf="photography">
-	<p>
+  <div class="card-body">
+	<p >
 		manageuser works!This is a list of course categories, click on each to see a list of courses for a given
 		category.This is a list of course categories, click on each to sek on each to see a list of courses for
 		a given category.This is a list of course categories, click on each to see a list of courses for a given
@@ -16,9 +22,11 @@
 		list of course categories, click on each to see a list of courses for a given category.This is a list of course
 		categories, click on each to see a list of courses for a given category.4
 	</p>
+  </div>
 </div>
 
 <div *ngIf="health">
+  <div class="card-body">
 	<p>
 		manageuser works!This is a list of course categories, click on each to see a list of courses for a given
 		category.This is a list of course categories, click on each to sek on each to see a list of courses for
@@ -28,9 +36,11 @@
 		list of course categories, click on each to see a list of courses for a given category.This is a list of course
 		categories, click on each to see a list of courses for a given category.4
 	</p>
+  </div>
 </div>
 
 <div *ngIf="music">
+  <div class="card-body">
 	<p>
 		manageuser works!This is a list of course categories, click on each to see a list of courses for a given
 		category.This is a list of course categories, click on each to sek on each to see a list of courses for
@@ -40,4 +50,7 @@
 		list of course categories, click on each to see a list of courses for a given category.This is a list of course
 		categories, click on each to see a list of courses for a given category.4
 	</p>
+  </div>
+</div>
+	</div>
 </div>
