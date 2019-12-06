@@ -27,6 +27,7 @@ export class HomewidgetmenuComponent implements OnInit {
   showLoginPage = true;
   showForgotPwdPage = false;
   showSignupPwdPage = false;
+  isModelShow = false;
   page: string;
 
   constructor(
@@ -108,6 +109,7 @@ export class HomewidgetmenuComponent implements OnInit {
     this.homecomponent.showSpinner();
     this.showLoginPage = true;
     this.showSignupPwdPage = false;
+    this.isModelShow = true;
   }
 
   /**
@@ -127,6 +129,7 @@ export class HomewidgetmenuComponent implements OnInit {
     this.homecomponent.showSpinner();
     this.showLoginPage = true;
     this.showForgotPwdPage = false;
+    this.isModelShow = true;
   }
 
   /**
