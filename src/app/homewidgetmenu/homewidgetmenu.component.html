@@ -4,30 +4,35 @@
 	<div *ngIf="showLoginPage">
 		<div class="card">
 			<article class="card-body">
-				<a (click)="navigate('signup')" class="float-right btn btn-outline-primary">Sign up</a>
-				<h4 class="card-title mb-4 mt-1">Sign in</h4>
+			
+				<h4 class="card-title mb-4 mt-1">Login</h4>
 				<form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
 					<div class="form-group">
-						<label>Your email</label>
-						<input  class="form-control"  formControlName="username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': loginSubmitted && loginvar.username.errors }"
+						<label>Email</label>
+						<input  class="form-control"  formControlName="username" placeholder="YOUR EMAIL ADDRESS" type="email" [ngClass]="{ 'is-invalid': loginSubmitted && loginvar.username.errors }"
             >
 						<div *ngIf="loginSubmitted && loginvar.username.errors" class="invalid-feedback">
 							<div *ngIf="loginvar.username.errors.required">Username is required</div>
 						</div>
 					</div> <!-- form-group// -->
-					<div class="form-group float-right">
-						<a (click)="navigate('fwdpage')" class="float-right btn btn-outline-primary btn-sm"
-							style="margin-top:-5px;width:80px">Forgot?</a>
-						<label>Your password</label>
-						<input class="form-control" placeholder="Password" type="password" formControlName="password"[ngClass]="{ 'is-invalid': loginSubmitted && loginvar.password.errors }" />
+					<div class="form-group">
+				 	
+						<label>Password</label> 
+						<input class="form-control" placeholder="YOUR PASSWORD" type="password" formControlName="password"[ngClass]="{ 'is-invalid': loginSubmitted && loginvar.password.errors }" />
 						<div *ngIf="loginSubmitted && loginvar.password.errors" class="invalid-feedback">
 							<div *ngIf="loginvar.password.errors.required">Password is required</div>
 						</div>
 					</div> <!-- form-group// -->
 					<div class="form-group">
-						<button  type="submit" class="btn btn-primary btn-block"> Login  </button>
+						<button  type="submit" class="btn btn-primary "> Login  </button>
+            <a (click)="navigate('fwdpage')" class="float-right btn btn-outline-primary btn-sm"
+							 >Forgot Password?</a>
 
 					</div> <!-- form-group// -->
+          	<div class="form-group">
+              	<a (click)="navigate('signup')" class="btn btn-outline-primary btn-sm">Do not have an account? SIGN UP</a>
+          
+          	</div>
 				</form>
 			</article>
 		</div>
@@ -38,12 +43,15 @@
 	<div *ngIf="showForgotPwdPage">
 		<div class="card">
 			<article class="card-body">
-				<a (click)="navigate('login')" class="float-right btn btn-outline-primary">Login</a>
-				<h4 class="card-title mb-4 mt-1">Forgot Password</h4>
+			
+
+				<h4 class="card-title">Forgot Password</h4>
+         <p>
+        Don't worry, we've all been there. We can help! All you need to do is enter your email ID and follow the instructions!Your password will be reset and email to you. </p>
 				<form [formGroup]="fPwdForm" (ngSubmit)="onForgetPasswordSubmit()">
 					<div class="form-group">
-						<label>Your email</label>
-						<input  class="form-control"  formControlName="fPwdForm_username" placeholder="Email" type="email" [ngClass]="{ 'is-invalid': fPwdSubmitted && fPwdvar.fPwdForm_username.errors }"
+					
+						<input  class="form-control"  formControlName="fPwdForm_username" placeholder="EMAIL ADDRESS" type="email" [ngClass]="{ 'is-invalid': fPwdSubmitted && fPwdvar.fPwdForm_username.errors }"
         >
 						<div *ngIf="fPwdSubmitted && fPwdvar.fPwdForm_username.errors" class="invalid-feedback">
 							<div *ngIf="fPwdvar.fPwdForm_username.errors.required">Username is required</div>
@@ -51,9 +59,9 @@
 					</div> <!-- form-group// -->
 
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-block"> Reset  </button>
-
+						<button type="submit" class="btn btn-primary "> SEND PASSWORD  </button>
 					</div> <!-- form-group// -->
+          <a (click)="navigate('login')" class="float-left btn btn-outline-primary">Back to LOGIN?</a>
 				</form>
 			</article>
 		</div>
