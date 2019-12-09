@@ -20,6 +20,7 @@ export class AuthenticationService {
     return this.currentUserSubject.value;
   }
 
+ 
   /**
    * This method invoke service layer with the login details
    */

@@ -29,7 +29,7 @@ export class HomewidgetmenuComponent implements OnInit {
   showForgotPwdPage = false;
   showSignupPwdPage = false;
   page: string;
-
+id: string;
   constructor(
     @Inject(FormBuilder) private formBuilder: FormBuilder,
     @Inject(Router) private router: Router,
@@ -38,8 +38,12 @@ export class HomewidgetmenuComponent implements OnInit {
     private authenticationService: AuthenticationService,
     @Inject(HomeComponent) private homecomponent: HomeComponent,
     @Inject(AlertService) private alertService: AlertService
-  ) {}
-
+  ) {
+     route.params.subscribe(params => (this.id = params["id"]));
+     console.log("HomewidgetmenuComponent",this.id);
+     this.navigate(this.id);
+  }
+   
   ngOnInit() {
     this.setloginForm();
     this.setSignupForm();
@@ -85,7 +89,9 @@ export class HomewidgetmenuComponent implements OnInit {
           this.router.navigate(["dashboard"]);
         },
         error => {
+        
           this.alertService.error(error.message);
+          
         }
       );
   }
@@ -105,10 +111,8 @@ export class HomewidgetmenuComponent implements OnInit {
      * Once service is called set the below parameters on success
      */
     console.log("this s onSignupSubmit");
-    this.homecomponent.showSpinner();
     this.showLoginPage = true;
     this.showSignupPwdPage = false;
-    this.homecomponent.successMsg = true;
   }
 
   /**
@@ -125,10 +129,20 @@ export class HomewidgetmenuComponent implements OnInit {
     /**
      * Once service is called set the below parameters  on success
      */
-    this.homecomponent.showSpinner();
     this.showLoginPage = true;
     this.showForgotPwdPage = false;
-    this.homecomponent.successMsg = true;
+    this.authenticationService
+      .fwd()
+      .pipe(first())
+      .subscribe(
+        data => {
+          this.router.navigate(["dashboard"]);
+        },
+        error => {
+          this.alertService.error(error.message);
+          
+        }
+      );
   }
 
   /**
@@ -136,14 +150,14 @@ export class HomewidgetmenuComponent implements OnInit {
    */
   navigate(path) {
     this.page = path;
-    if (this.page == "fwdpage") {
+    if (this.page == "_fpwd") {
       this.showLoginPage = false;
       this.showForgotPwdPage = true;
       this.showSignupPwdPage = false;
       this.signupSubmitted = false;
       this.loginSubmitted = false;
     }
-    if (this.page == "login") {
+    if (this.page == "_login") {
       this.showLoginPage = true;
       this.showForgotPwdPage = false;
       this.showSignupPwdPage = false;

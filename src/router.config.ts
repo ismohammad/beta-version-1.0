@@ -35,6 +35,42 @@ export const routerConfig: Routes = [
       }
     ]
   },
+  /**
+   * This is signup page router
+   */
+  {
+    path: "_navsignup/:id",
+    component: HomeComponent,
+    children: [
+      {
+        path: "",
+        component: HomewidgetComponent
+      },
+       
+      {
+        path: "",
+        outlet: "homemenu",
+        component: HomewidgetmenuComponent
+      }
+    ]
+  },
+  {
+    path: "_navfp/:id",
+    component: HomeComponent,
+    children: [
+      {
+        path: "",
+        component: HomewidgetComponent
+      },
+       
+      {
+        path: "",
+        outlet: "homemenu",
+        component: HomewidgetmenuComponent
+      }
+    ]
+  },
+/** The below are the Dashboard Componets related Routes */
   {
     path: "dashboard",
     component: DashboardComponent,
