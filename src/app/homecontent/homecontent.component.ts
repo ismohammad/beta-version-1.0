@@ -11,12 +11,20 @@ export class HomecontentComponent implements OnInit {
   music = false;
   health = false;
   id: string;
+  
   constructor(route: ActivatedRoute) {
+     console.log("HomecontentComponent",this.id);
     route.params.subscribe(params => (this.id = params["id"]));
+   
   }
 
   ngOnInit() {
-    if (this.id == "Photography") {
+    this.gethomewidgetcontentbyid(this.id);
+  }
+
+  gethomewidgetcontentbyid(id)
+  {
+      if (this.id == "Photography") {
       console.log("this is photography", this.id);
       this.photography = true;
     }

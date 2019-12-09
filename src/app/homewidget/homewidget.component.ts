@@ -8,7 +8,9 @@ import { Router, ActivatedRoute } from "@angular/router";
 })
 export class HomewidgetComponent {
   photography = false;
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router, private route: ActivatedRoute) {
+    console.log("HomewidgetComponent");
+  }
 
   navigate(path) {
     this.router.navigate([{ outlets: { primary: path, homemenu: path } }], {

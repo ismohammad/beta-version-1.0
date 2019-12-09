@@ -11,6 +11,7 @@ import { first } from "rxjs/operators";
 import { AuthenticationService } from "../service/authentication.service";
 import { AlertService } from "../service/alert.service";
 import { HomeComponent } from "../home/home.component";
+import { HomecontentComponent } from "../homecontent/homecontent.component";
 
 @Component({
   selector: "app-homewidgetmenu",
@@ -30,15 +31,16 @@ export class HomewidgetmenuComponent implements OnInit {
   showSignupPwdPage = false;
   page: string;
   id: string;
-
+  
   constructor(
     @Inject(FormBuilder) private formBuilder: FormBuilder,
     @Inject(Router) private router: Router,
-    @Inject(ActivatedRoute) private route: ActivatedRoute,
-    @Inject(AuthenticationService)
-    private authenticationService: AuthenticationService,
+    @Inject(ActivatedRoute) route: ActivatedRoute,
+    @Inject(AuthenticationService) private authenticationService: AuthenticationService,
     @Inject(HomeComponent) private homecomponent: HomeComponent,
-    @Inject(AlertService) private alertService: AlertService
+    @Inject(AlertService) private alertService: AlertService,
+    
+    
   ) {
     route.params.subscribe(params => (this.id = params["id"]));
     console.log("HomewidgetmenuComponent", this.id);
@@ -91,6 +93,7 @@ export class HomewidgetmenuComponent implements OnInit {
         },
         error => {
           this.alertService.error(error.message);
+          
         }
       );
   }
@@ -130,17 +133,6 @@ export class HomewidgetmenuComponent implements OnInit {
      */
     this.showLoginPage = true;
     this.showForgotPwdPage = false;
-    this.authenticationService
-      .fwd()
-      .pipe(first())
-      .subscribe(
-        data => {
-          this.router.navigate(["dashboard"]);
-        },
-        error => {
-          this.alertService.error(error.message);
-        }
-      );
   }
 
   /**
