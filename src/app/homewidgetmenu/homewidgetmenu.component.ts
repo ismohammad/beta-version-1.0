@@ -29,7 +29,8 @@ export class HomewidgetmenuComponent implements OnInit {
   showForgotPwdPage = false;
   showSignupPwdPage = false;
   page: string;
-id: string;
+  id: string;
+
   constructor(
     @Inject(FormBuilder) private formBuilder: FormBuilder,
     @Inject(Router) private router: Router,
@@ -39,11 +40,11 @@ id: string;
     @Inject(HomeComponent) private homecomponent: HomeComponent,
     @Inject(AlertService) private alertService: AlertService
   ) {
-     route.params.subscribe(params => (this.id = params["id"]));
-     console.log("HomewidgetmenuComponent",this.id);
-     this.navigate(this.id);
+    route.params.subscribe(params => (this.id = params["id"]));
+    console.log("HomewidgetmenuComponent", this.id);
+    this.navigate(this.id);
   }
-   
+
   ngOnInit() {
     this.setloginForm();
     this.setSignupForm();
@@ -89,9 +90,7 @@ id: string;
           this.router.navigate(["dashboard"]);
         },
         error => {
-        
           this.alertService.error(error.message);
-          
         }
       );
   }
@@ -140,7 +139,6 @@ id: string;
         },
         error => {
           this.alertService.error(error.message);
-          
         }
       );
   }
@@ -164,7 +162,7 @@ id: string;
       this.signupSubmitted = false;
       this.fPwdSubmitted = false;
     }
-    if (this.page == "signup") {
+    if (this.page == "_signup") {
       this.showLoginPage = false;
       this.showForgotPwdPage = false;
       this.showSignupPwdPage = true;
