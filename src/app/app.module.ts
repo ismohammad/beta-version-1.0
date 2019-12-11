@@ -18,6 +18,7 @@ import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { DashboardcontentComponent } from './dashboardcontent/dashboardcontent.component';
 import { AlertComponent } from './alert/alert.component';
 import { AlertService } from './service/alert.service';
+import { TopnavComponent } from './topnav/topnav.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { AlertService } from './service/alert.service';
     ManageuserComponent,
     HomecontentComponent,
     DashboardcontentComponent,
-    AlertComponent
+    AlertComponent,
+    TopnavComponent
   ],
   bootstrap: [AppComponent],
   providers: [AuthenticationService, AlertService]

@@ -1,6 +1,6 @@
-<div class="container">
+<!--<div class="container">
 	<div class="row mx-1">
-		<!--Grid column-->
+	 
 		<div class="col-md-8 mb-4">
 			<div class="card card-image">
 				<div class="text-white d-flex align-items-center rgba-black-strong py-5 px-4">
@@ -15,7 +15,7 @@
 					</div>
 				</div>
 			</div>		 
-				<!--Grid column-->
+			 
 				<div class="card sectionMargin" >
 					<div *ngIf="id">
 						<div class="card-header">
@@ -43,6 +43,58 @@
 			</div>
        	<router-outlet name="sidemenu"></router-outlet>
 		</div>
+</div>-->
+
+<div class="row">
+	<div class="col">
+		<div class="card card-image ">
+			<div class="text-white d-flex align-items-center rgba-black-strong py-5 px-4">
+				<div>
+					<h3 class="card-title py-3 font-weight-bold">		Dashboard Page
+					</h3>
+					<p class="pb-3">This is a list of course categories, click on each to see a list of courses
+						for
+						a given
+						category.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row sectionMargin" >
+  <div class="col-sm-1"></div>
+ 
+					<div *ngIf="id">
+						<div class="card-header">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item active"><a routerLink="/dashboard">
+										Dashboard</a></li>
+								<li class="breadcrumb-item">
+									<span *ngIf="id==='1'">
+               photography 
+              </span>
+									<span *ngIf="id==='2'">
+               health
+              </span>
+									<span *ngIf="id==='3'">
+               music
+             </span>
+								</li>
+							</ol>
+						</div>
+		 
+  	</div>
+</div>
+ 
+<div class="row sectionMargin">
+	<div class="col-sm-1"></div>
+	<div class="col-md-8">
+		<alert></alert>
+		<router-outlet></router-outlet>
+	</div>
+	<div class="col-md-2.5">
+	  <router-outlet name="sidemenu"></router-outlet>
+	</div>
 </div>
 
 

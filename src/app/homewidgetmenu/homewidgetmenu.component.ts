@@ -93,7 +93,7 @@ export class HomewidgetmenuComponent implements OnInit {
         },
         error => {
           this.alertService.error(error.message);
-          
+          this.router.navigate(["dashboard"]);
         }
       );
   }
