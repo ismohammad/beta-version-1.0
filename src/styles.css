@@ -8,8 +8,8 @@ body {
   background-repeat: no-repeat; background-size: inherit; background-attachment: fixed; 
 }
  
-.navbar:not(.top-nav-collapse) {
-  background: transparent !important;
+.navbar{
+  
 }
 .card-image{
  background-color:  rgb(167, 64, 64);
