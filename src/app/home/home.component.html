@@ -1,23 +1,29 @@
-<div class="container" >
-	<div class="row">
-		<!--Grid column-->
-		<div class="col-md-8 mb-14">
-			<div class="card card-image">
-				<div class="text-white d-flex align-items-center rgba-black-strong py-5 px-4">
-					<div>
-						<h3 class="card-title py-3 font-weight-bold">Home Page LOGO
-            </h3>
-							<p class="pb-3">This is a list of course categories, click on each to see a list of courses
-								for
-								a given
-								category.</p>
-					</div>
+<div class="row">
+	<div class="col">
+		<div class="card card-image " style="width: 140rem;height:20rem;">
+			<div class="text-white d-flex align-items-center rgba-black-strong py-5 px-4">
+				<div>
+					<h3 class="card-title py-3 font-weight-bold">Home Page LOGO
+					</h3>
+					<p class="pb-3">This is a list of course categories, click on each to see a list of courses
+						for
+						a given
+						category.</p>
 				</div>
 			</div>
-      <alert></alert>
-			<router-outlet></router-outlet>
 		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md">
+		<router-outlet name="homemenu"></router-outlet>
+	</div>
+
+	<div class="col-md-7">
+		<alert></alert>
+		<router-outlet></router-outlet>
+	</div>
+	<div class="col-md">
 		<router-outlet name="homemenu"></router-outlet>
 	</div>
 </div>
-

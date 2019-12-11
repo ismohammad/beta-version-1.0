@@ -1,39 +1,98 @@
- <div class="container ">
-	<div class="row sectionMargin">
-		<div class="card " style="width: 22rem;">
-			<div class="card-header">
-				<h2>Photography</h2>
-			</div>
-			<div class="card-body">
-				<p class="card-text" >Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-info"  (click)="navigate('Photography')"    role="button">View details »</a></p>
-			</div>
+<!--<div class="row sectionMargin">
+	<div class="card " style="width: 22rem;">
+		<div class="card-header">
+			<h2>Photography</h2>
 		</div>
-    <div style="margin-left:20px"> </div>
-		<div class="card " style="width: 22rem;">
-			<div class="card-header">
-				<h2>Health</h2>
-			</div>
-			<div class="card-body">
-				 
-				<p class="card-text" >Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-info" (click)="navigate('Health')" role="button">View details »</a></p>
-			</div>
+		<div class="card-body">
+			<p class="card-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
+				commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+				malesuada magna mollis euismod. Donec sed odio dui. </p>
+			<p><a class="btn btn-info" (click)="navigate('Photography')" role="button">View details »</a></p>
 		</div>
 	</div>
 
-  <div class="row sectionMargin">
-     	<div class="card" style="width: 22rem;">
-			<div class="card-header">
-				<h2>Music</h2>
-			</div>
-			<div class="card-body">
-				 
-				<p class="card-text" >Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-info" (click)="navigate('Music')" role="button">View details »</a></p>
-			</div>
+	<div class="card " style="width: 22rem;">
+		<div class="card-header">
+			<h2>Health</h2>
 		</div>
-
+		<div class="card-body">
+			<p class="card-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
+				commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+				malesuada magna mollis euismod. Donec sed odio dui. </p>
+			<p><a class="btn btn-info" (click)="navigate('Health')" role="button">View details »</a></p>
+		</div>
 	</div>
+</div>-->
+
  
+    <div class="card-deck sectionMargin">
+        <div class="card text-center" style="width: 22rem;" >
+            <div class="card-block">
+                <h2 class="card-title">Photography</h2>
+                <p class="card-text text-left">
+                   	 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
+				commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+				malesuada magna mollis euismod. Donec sed odio dui. 
+                </p>
+            </div>
+            <div class="card-footer">
+              	<p><a  class="btn" (click)="navigate('Photography');" role="button">View details »</a></p>
+            </div>
+        </div>
+
+       <div class="card text-center" style="width: 22rem;" >
+            <div class="card-block">
+                <h2 class="card-title">Health</h2>
+                <p class="card-text text-left">
+                   	 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
+				commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
+				malesuada magna mollis euismod. Donec sed odio dui. 
+                </p>
+            </div>
+            <div class="card-footer">
+              	<p><a  class="btn" (click)="navigate('Health')" role="button">View details »</a></p>
+            </div>
+        </div>
+ 
+    </div>
+    <div class="card-deck mt-4">
+        <div class="card text-center">
+            <div class="card-block">
+                <h4 class="card-title">Funding Options</h4>
+                <p class="card-text">
+                    Add credit/debit card
+                    <br> Top up Account
+                    <br> Manage cards
+                </p>
+            </div>
+            <div class="card-footer">
+                Link
+            </div>
+        </div>
+
+        <div class="card text-center">
+            <div class="card-block">
+                <h4 class="card-title">Account History</h4>
+                <p class="card-text">
+                    View all financial transactions on my account
+                </p>
+            </div>
+            <div class="card-footer">
+                Link
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-block">
+                <h4 class="card-title">User Settings</h4>
+                <p class="card-text">
+                    Edit personal details
+                    <br> Change top-up settings
+                    <br> Change password
+                </p>
+            </div>
+            <div class="card-footer">
+                Link
+            </div>
+        </div>
+    </div>
  
