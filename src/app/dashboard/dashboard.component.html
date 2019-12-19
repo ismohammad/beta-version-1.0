@@ -1,45 +1,12 @@
-<div class="row">
-	<div class="col">
-		<div class="card card-image ">
-			<div class="text-white d-flex align-items-center rgba-black-strong py-5 px-4">
-				<div>
-					<h3 class="card-title py-3 font-weight-bold"> Dashboard Page
-					</h3>
-					<p class="pb-3">This is a list of course categories, click on each to see a list of courses
-						for
-						a given
-						category.</p>
-				</div>
+<div class="row sectionMargin">
+	<div class="col-xs-1" style="margin-left:10px">
+		<router-outlet name="sidemenu"></router-outlet>
+	</div>
+	<div class="col-md-9">
+		<div class="card ">
+			<div class="card-body">
+				<router-outlet></router-outlet>
 			</div>
 		</div>
 	</div>
-</div>
-
-<div class="container">
- 		<div class="row sectionMargin">
-			<div class="col-md-8">
-				<div class="card ">
-					<div class="card-header">
-            <!--<div *ngIf="id" >
-					 		<a routerLink="/dashboard">
-								<h5>Dashboard</h5></a> <span *ngIf="id==='1'">
-               /  photography 
-              </span>
-								<span *ngIf="id==='2'">
-               / health
-              </span>
-								<span *ngIf="id==='3'">
-               / music
-             </span>
-						</div>-->
-					</div>
-					<div class="card-body">
-						<router-outlet></router-outlet>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-2.5" style="margin-left:10px">
-				<router-outlet name="sidemenu"></router-outlet>
-			</div>
- 	</div>
 </div>
