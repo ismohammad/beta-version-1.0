@@ -33,8 +33,11 @@ height:300px;
 object-fit: initial;
 
 }
-.carousel .item.left img{
-    width: 1000% !important;
+
+.carousel-caption{
+  text-align: left;
+right:50px;
+bottom:100px
 }
  
 
