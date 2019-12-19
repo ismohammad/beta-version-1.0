@@ -9,7 +9,7 @@ import { HomecontentComponent } from "./app/homecontent/homecontent.component";
 import { ForgotpwdComponent } from "./app/forgotpwd/forgotpwd.component";
 import { DashboardcontentComponent } from "./app/dashboardcontent/dashboardcontent.component";
 import { ManageuserComponent } from "./app/manageuser/manageuser.component";
-import { EdituserComponent } from './app/edituser/edituser.component';
+import { EdituserComponent } from "./app/edituser/edituser.component";
 
 export const routerConfig: Routes = [
   {
@@ -18,23 +18,17 @@ export const routerConfig: Routes = [
     children: [
       {
         path: "",
-        component: HomewidgetComponent
-      },
-      {
-        path: ":id",
-        component: HomecontentComponent
-      },
-      {
-        path: "",
-        outlet: "homemenu",
-        component: HomewidgetmenuComponent
-      },
-      {
-        path: ":id",
-        outlet: "homemenu",
         component: HomewidgetmenuComponent
       }
     ]
+  },
+   {
+    path: "feature",
+    component: HomewidgetComponent,
+   },
+  {
+    path: "feature/:id",
+    component: HomecontentComponent
   },
   /**
    * This is signup page router
@@ -47,7 +41,7 @@ export const routerConfig: Routes = [
         path: "",
         component: HomewidgetComponent
       },
-       
+
       {
         path: "",
         outlet: "homemenu",
@@ -63,7 +57,7 @@ export const routerConfig: Routes = [
         path: "",
         component: HomewidgetComponent
       },
-       
+
       {
         path: "",
         outlet: "homemenu",
@@ -71,7 +65,7 @@ export const routerConfig: Routes = [
       }
     ]
   },
-/** The below are the Dashboard Componets related Routes */
+  /** The below are the Dashboard Componets related Routes */
   {
     path: "dashboard",
     component: DashboardComponent,
@@ -134,7 +128,7 @@ export const routerConfig: Routes = [
     ]
   },
   {
-     path: "editprofile/:id",
+    path: "editprofile/:id",
     component: DashboardComponent,
     children: [
       {

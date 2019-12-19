@@ -13,9 +13,8 @@ export class HomecontentComponent implements OnInit {
   id: string;
   
   constructor(route: ActivatedRoute) {
-     console.log("HomecontentComponent",this.id);
     route.params.subscribe(params => (this.id = params["id"]));
-   
+    console.log("HomecontentComponent",this.id);
   }
 
   ngOnInit() {
