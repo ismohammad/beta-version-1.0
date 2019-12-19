@@ -17,8 +17,9 @@ background-repeat: no-repeat;
  background-attachment:fixed;
  background: url('https://jj0gdq.ch.files.1drv.com/y4mXmzSio2QMt93OD43lj-Wlq8LX2l54PS3OQitq5ID8kIHm3KGJ6IUs7zMvVmapQdkvtl7pwBUUF70cpLI37hEJmNO2kBIj-4uS6WhgWXP1NX4muf7Qb1PPYyWtAkZygWUPiBSI8Vd3M-Q1qcNP-vYxYgGi_WZ-XYAVheHn0LulPQ05fwwdBCXeuTXYY45Vv127bGOgyq0rqc9ye99MDLMZA?width=180&height=20&cropmode=none');  
 } 
- a {
-     color: white;
+ .navmenu-a {
+     color: rgb(226, 226, 226);
+     font-size: 20px
  }
  
  .container{
