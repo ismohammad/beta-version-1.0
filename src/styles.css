@@ -5,22 +5,32 @@ main {
     margin-top: 15px;
 } 
 body {
-  background-repeat: no-repeat; background-size: inherit; background-attachment: fixed; 
+    background-size: auto;
+    background-attachment: fixed; 
+    background-position: top center;
+    background-repeat: no-repeat;
+  position: relative;
+
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://kd0gdq.ch.files.1drv.com/y4mfRL4TjDijLV6KTZk62xgwXTqDtV36cHOft3HK9AerJqPc-ua9iGANFisKoxhWbaZ9-XTgwYXrq2cajtJfVuvk-XtnFpesBHtIplsDIWG-Ja2G0qHB4C5SZCoN_esJposZWDUPUY-ue973vkfCcVE9PCckiOywanPiqqN0Obwmin112oke6rkV87ssD0y47rCglkkbY_wsRc77972X5SsRw');
+  
 }
  
-.navbar{
-  
-}
+ 
 .card-image{
- background-color:  rgb(167, 64, 64);
-  background-repeat: no-repeat; background-size: contain; background-position: bottom center;  
+  background-repeat: no-repeat;
+  
+ background-position: bottom bottom;
+ background: url('https://jj0gdq.ch.files.1drv.com/y4mXmzSio2QMt93OD43lj-Wlq8LX2l54PS3OQitq5ID8kIHm3KGJ6IUs7zMvVmapQdkvtl7pwBUUF70cpLI37hEJmNO2kBIj-4uS6WhgWXP1NX4muf7Qb1PPYyWtAkZygWUPiBSI8Vd3M-Q1qcNP-vYxYgGi_WZ-XYAVheHn0LulPQ05fwwdBCXeuTXYY45Vv127bGOgyq0rqc9ye99MDLMZA?width=1280&height=720&cropmode=none');
   
 } 
- /*@media (min-width: 1200px) {
-    .container{
-        max-width: 960px;
-    }
-}*/
+ 
+
+.container {
+  position: relative;
+  max-width: 1180px; /* Maximum width */
+}
+
+ 
  
  
 
