@@ -9,6 +9,7 @@ import { HomecontentComponent } from "./app/homecontent/homecontent.component";
 import { ForgotpwdComponent } from "./app/forgotpwd/forgotpwd.component";
 import { DashboardcontentComponent } from "./app/dashboardcontent/dashboardcontent.component";
 import { ManageuserComponent } from "./app/manageuser/manageuser.component";
+import { EdituserComponent } from './app/edituser/edituser.component';
 
 export const routerConfig: Routes = [
   {
@@ -124,6 +125,21 @@ export const routerConfig: Routes = [
       {
         path: "",
         component: ManageuserComponent
+      },
+      {
+        path: "",
+        outlet: "sidemenu",
+        component: MenuComponent
+      }
+    ]
+  },
+  {
+     path: "editprofile/:id",
+    component: DashboardComponent,
+    children: [
+      {
+        path: "",
+        component: EdituserComponent
       },
       {
         path: "",

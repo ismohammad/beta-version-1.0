@@ -10,6 +10,7 @@ export class DashboardComponent implements OnInit {
   id: string;
   constructor(route: ActivatedRoute) {
     route.params.subscribe(params => (this.id = params["id"]));
+    console.log("Inside DashboardComponent constructor ",this.id);
   }
 
   ngOnInit() {

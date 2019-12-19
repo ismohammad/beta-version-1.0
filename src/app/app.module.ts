@@ -19,6 +19,7 @@ import { DashboardcontentComponent } from './dashboardcontent/dashboardcontent.c
 import { AlertComponent } from './alert/alert.component';
 import { AlertService } from './service/alert.service';
 import { TopnavComponent } from './topnav/topnav.component';
+import { EdituserComponent } from './edituser/edituser.component';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import { TopnavComponent } from './topnav/topnav.component';
     HomecontentComponent,
     DashboardcontentComponent,
     AlertComponent,
-    TopnavComponent
+    TopnavComponent,
+    EdituserComponent
   ],
   bootstrap: [AppComponent],
   providers: [AuthenticationService, AlertService]

@@ -16,6 +16,7 @@ a:hover{ text-decoration: none; }
 .sidebar li a,.sidebar li a.collapsed.active{ display:block; padding:8px 12px; color:#fff;border-left:0px solid #dedede;  text-decoration:none}
 .sidebar li a.active{border-left:5px solid #dedede; transition: all 0.5s  ease-in-out}
 .sidebar li a:hover{background-color:rgb(24, 143, 240) !important;}
+.menu-imp-1{background-color:rgb(24, 143, 240) !important;}
 .sidebar li a i{ padding-right:5px;}
 .sidebar ul li .sub-menu li a{ position:relative}
 .sidebar ul li .sub-menu li a:before{
@@ -25,6 +26,7 @@ a:hover{ text-decoration: none; }
     padding-left: 0px;
     padding-right: 10px;
     vertical-align: middle;
+    
 }
 .sidebar ul li .sub-menu li a:hover:after {
     content: "";
