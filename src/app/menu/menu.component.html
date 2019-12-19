@@ -7,31 +7,31 @@
 			</li>
  
 
-			<li> <a [routerLink]="['/item_3', 3]"><i class="fa fa-users"></i>
+			<li> <a [routerLink]="['/menu', 'user']"><i class="fa fa-users"></i>
 					<span class="nav-label">Users</span></a> </li>
-			<li> <a href="#" data-toggle="collapse" data-target="#products" class="collapsed active">
+			<li> <a routerLink='/dashboard' data-toggle="collapse" data-target="#products" class="collapsed active">
 					<i class="fa fa-tasks"></i> <span class="nav-label">Task</span>
 					<span class="fa fa-chevron-left pull-right"></span> </a>
 				<ul class="sub-menu collapse" id="products">
-					<li class="active"><a [routerLink]="['/item_1', 1]">My Task</a></li>
-					<li><a [routerLink]="['/item_2', 2]">Review Task</a></li>
+					<li class="active"><a routerLink='/dashboard'>My Task</a></li>
+					<li><a routerLink='/dashboard'>Review Task</a></li>
 				</ul>
 			</li>
-			<li class="menu-imp-1"> <a [routerLink]="['/item_2', 2]"><i class="fa fa-laptop"></i>
+			<li class="menu-imp-1"> <a routerLink='/dashboard'><i class="fa fa-laptop"></i>
 					<span class="nav-label ">Manage Service (10)</span></a>
 			</li>
 			<li> <a href="#" data-toggle="collapse" data-target="#service"
 					class="collapsed active"><i class="fa fa-table"></i>
 					<span class="nav-label">Service Provider</span><span class="fa fa-chevron-left pull-right"></span></a>
 				<ul class="sub-menu collapse" id="service">
-					<li><a [routerLink]="['/item_2', 2]"> New Service</a></li>
-          <li><a [routerLink]="['/item_2', 2]"> Edit Service</a></li>
-          <li><a [routerLink]="['/item_2', 2]"> Stop Service</a></li>
+					<li><a routerLink='/dashboard'> New Service</a></li>
+          <li><a routerLink='/dashboard'> Edit Service</a></li>
+          <li><a routerLink='/dashboard'> Stop Service</a></li>
 				</ul>
          
 			</li>
 
-			<li class="menu-imp-2">  <a routerLink="/home"><i class="fa fa-sign-out"></i> <span class="nav-label">Logout</span> </a>
+			<li >  <a [routerLink]="['/editprofile', 'view']" ><i class="fa fa-user"></i> <span class="nav-label">View Profile</span> </a>
 			</li>
 		</ul>
 	</div>
@@ -41,9 +41,9 @@
 <div class="user-panel">
 	<div class="pull-left image">
 		<img  src="https://jj2hgq.ch.files.1drv.com/y4myOCN7C-uQ07zF_b5xgKmAiDSbf9RLfHdRd5HrNxVQTHq8tjiEPrhARdyZ6VC09qWcL51g0zN-o__FZLcjfYFyt3utAa73AZu3KtZjIVlFJ6dl1A1tOTIVZSjhjGlOTrD9r5qfJtwPMLWQ7dNpFxsSQ1uR28b1Oj9GHDnvhE1y_Zq3dztRh-SAm_aiFnNReRd_4XGRrRZfaCzKCefjkpO4w?width=591&height=591&cropmode=none" class="rounded-circle" alt="User Image">
-		<div class="color:white;font-weight:bold;margin-left:60px;margin-top:10px text-left"> 
-      	 Ishaq Tasleem Mohammad 
+		<div class="color:white;font-weight:bold"> 
+      	 <h5>Ishaq Tasleem Mohammad </h5>
 		</div>
-    <p class="text-left m-2"><a [routerLink]="['/editprofile', 'view']" class="btn btn-primary  btn-sm"><i class="fa fa-user"></i> View Profile</a></p>
+    <p class="text-left m-1"><a routerLink="/home" class="btn btn-danger  btn"><i class="fa fa-sign-out"></i> Logout</a></p>
 	</div>
 </div>
