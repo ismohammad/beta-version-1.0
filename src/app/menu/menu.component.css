@@ -18,6 +18,8 @@ a:hover{ text-decoration: none; }
 .sidebar li a:hover{background-color:rgb(24, 143, 240) !important;}
 .menu-imp-1{background-color:rgb(24, 143, 240) !important;}
 .sidebar li a i{ padding-right:5px;}
+.menu-imp-2{background-color:rgb(241, 103, 68) !important;}
+
 .sidebar ul li .sub-menu li a{ position:relative}
 .sidebar ul li .sub-menu li a:before{
     font-family: FontAwesome;
