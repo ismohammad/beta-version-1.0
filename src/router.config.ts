@@ -10,6 +10,7 @@ import { ManageserviceComponent } from './app/manageservice/manageservice.compon
 import { SettingsComponent } from "./app/settings/settings.component";
 import { ManageuserComponent } from "./app/manageuser/manageuser.component";
 import { NewserviceComponent } from './app/newservice/newservice.component';
+import { EditserviceComponent } from './app/editservice/editservice.component';
 
 export const routerConfig: Routes = [
   {
@@ -113,6 +114,21 @@ export const routerConfig: Routes = [
       {
         path: "",
         component: NewserviceComponent
+      },
+      {
+        path: "",
+        outlet: "sidemenu",
+        component: DashboardmenusectionComponent
+      }
+    ]
+  },
+   {
+    path: "editservice",
+    component: DashboardComponent,
+    children: [
+      {
+        path: "",
+        component: EditserviceComponent
       },
       {
         path: "",
