@@ -1,5 +1,4 @@
-<div class="sectionMargin">
-	<!-- Login Page -->
+<!--<div class="sectionMargin">
 	<div *ngIf="showLoginPage">
 		<div class="card">
 			<article class="card-body">
@@ -12,7 +11,7 @@
 						<div *ngIf="loginSubmitted && loginvar.username.errors" class="invalid-feedback">
 							<div *ngIf="loginvar.username.errors.required">Username is required</div>
 						</div>
-					</div> <!-- form-group// -->
+					</div> 
 					<div class="form-group">
 
 						<label>Password</label>
@@ -20,13 +19,13 @@
 						<div *ngIf="loginSubmitted && loginvar.password.errors" class="invalid-feedback">
 							<div *ngIf="loginvar.password.errors.required">Password is required</div>
 						</div>
-					</div> <!-- form-group// -->
+					</div> 
 					<div class="form-group">
 						<button  type="submit" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal"> Login  </button>
 						<a [routerLink]="['/_nav', '_fpwd'] " class="float-right btn btn-outline-primary">Forgot
 							Password?</a>
 
-					</div> <!-- form-group// -->
+					</div> 
 					<div class="form-group">
 						<a [routerLink]="['/_nav', '_signup'] " class="btn btn-outline-primary btn-sm"
 							>Do not have an account?
@@ -37,7 +36,7 @@
 		</div>
 	</div>
 
-	<!-- Forgot Password Page -->
+	 
 
 	<div *ngIf="showForgotPwdPage">
 		<div class="card">
@@ -53,11 +52,11 @@
 						<div *ngIf="fPwdSubmitted && fPwdvar.fPwdForm_username.errors" class="invalid-feedback">
 							<div *ngIf="fPwdvar.fPwdForm_username.errors.required">Username is required</div>
 						</div>
-					</div> <!-- form-group// -->
+					</div>  
 
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal"> SEND PASSWORD  </button>
-					</div> <!-- form-group// -->
+					</div>  
 					<a [routerLink]="['/home']" class="float-left btn btn-outline-primary">Back to LOGIN?</a>
 
 				</form>
@@ -66,8 +65,7 @@
 	</div>
 
 
-	<!-- Sign Up Page -->
-	<!-- Modal -->
+	 
 	<div *ngIf="showSignupPwdPage">
 		<form [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()">
 			<div class="card">
@@ -81,7 +79,7 @@
 							<div *ngIf="signupvar.signup_username.errors.required">Username is required
 							</div>
 						</div>
-					</div> <!-- form-group// -->
+					</div>  
 					<div class="form-group">
 						<label>Password</label>
 						<input class="form-control" placeholder="ENTER NEW PASSWORD" type="password" formControlName="signup_password"[ngClass]="{ 'is-invalid': signupSubmitted && signupvar.signup_password.errors }" />
@@ -116,3 +114,47 @@
 		</form>
 	</div>
 </div>
+-->
+<div class="card card-container">
+	<div *ngIf="showLoginPage">
+		<img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+		<p id="profile-name" class="profile-name-card"></p>
+		<form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()">
+			<span id="reauth-email" class="reauth-email"></span>
+			<div class="form-group">
+				<input type="email" id="inputEmail" formControlName="username" [ngClass]="{ 'is-invalid': loginSubmitted && loginvar.username.errors }" class="form-control" placeholder="Email address" autofocus>
+				<div *ngIf="loginSubmitted && loginvar.username.errors" class="invalid-feedback">
+					<div *ngIf="loginvar.username.errors.required">Username is required</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password"[ngClass]="{ 'is-invalid': loginSubmitted && loginvar.password.errors }">
+				<div *ngIf="loginSubmitted && loginvar.password.errors" class="invalid-feedback">
+					<div *ngIf="loginvar.password.errors.required">Password is required</div>
+				</div>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+		</form><!-- /form -->
+		<a [routerLink]="['/_nav', '_fpwd'] " class="forgot-password">
+			Forgot the password?
+		</a>
+		<a [routerLink]="['/_nav', '_signup'] " class="btn  btn-sm">Do not have an account?
+			SIGN UP</a>
+	</div>
+
+	<div *ngIf="showForgotPwdPage">
+		<h4 class="card-title">Forgot Password</h4>
+		<form [formGroup]="fPwdForm" (ngSubmit)="onForgetPasswordSubmit()">
+			<span id="reauth-email" class="reauth-email"></span>
+			<div class="form-group">
+				<input type="email" id="inputEmail" formControlName="fPwdForm_username" [ngClass]="{ 'is-invalid': fPwdSubmitted && fPwdvar.fPwdForm_username.errors }" class="form-control" placeholder="Email address" autofocus>
+				<div *ngIf="fPwdSubmitted && fPwdvar.fPwdForm_username.errors" class="invalid-feedback">
+					<div *ngIf="fPwdvar.fPwdForm_username.errors.required">Username is required</div>
+				</div>
+			</div>
+		 
+			<button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Send Password</button>
+      <a [routerLink]="['/home']" class="btn  btn-sm">Back to LOGIN?</a>
+		</form><!-- /form -->
+	</div>
+</div><!-- /card-container -->
