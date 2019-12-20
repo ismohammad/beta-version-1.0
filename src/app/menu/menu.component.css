@@ -94,3 +94,97 @@ a:hover{ text-decoration: none; }
 }
 
 .fliph .user-panel{ display: none; }
+
+ 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0px 0px 15px 0px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 38px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+p {
+    margin: 0 0 20px;
+    line-height: 1.7;
+}
+
+p:last-child {
+    margin: 0px;
+}
+
+ 
+a {
+    text-decoration: none;
+    color: #ffffff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+    color: #ce0058;
+}
+
+sub {
+    bottom: 0em;
+}
+
+.lead {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #f0f3f5;
+    margin-bottom: 20px;
+}
+
+
+.feature-left {
+    margin-bottom: 40px;
+}
+
+.feature-left .feature-icon {
+    font-size: 50px;
+    color: #4cbec5;
+    display: inline-block;
+    float: left;
+    padding-right: 40px;
+    padding-top: 7px;
+}
+
+.feature-left .feature-content {
+    font-size: 20px;
+}
