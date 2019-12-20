@@ -20,6 +20,8 @@ import { AlertComponent } from './alert/alert.component';
 import { AlertService } from './service/alert.service';
 import { TopnavComponent } from './topnav/topnav.component';
 import { EdituserComponent } from './edituser/edituser.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomewhatwedosectionComponent } from './homewhatwedosection/homewhatwedosection.component';
 
 @NgModule({
   imports: [
@@ -43,7 +45,9 @@ import { EdituserComponent } from './edituser/edituser.component';
     DashboardcontentComponent,
     AlertComponent,
     TopnavComponent,
-    EdituserComponent
+    EdituserComponent,
+    FooterComponent,
+    HomewhatwedosectionComponent
   ],
   bootstrap: [AppComponent],
   providers: [AuthenticationService, AlertService]
