@@ -22,6 +22,8 @@ import { HomewhatwedosectionComponent } from './homewhatwedosection/homewhatwedo
 import { HomepurchasesectionComponent } from './homepurchasesection/homepurchasesection.component';
 import { ManageserviceComponent } from './manageservice/manageservice.component';
 import { SettingsComponent } from './settings/settings.component';
+import { NewserviceComponent } from './newservice/newservice.component';
+import { EditserviceComponent } from './editservice/editservice.component';
 
 @NgModule({
   imports: [
@@ -48,7 +50,9 @@ import { SettingsComponent } from './settings/settings.component';
     HomewhatwedosectionComponent,
     HomepurchasesectionComponent,
     ManageserviceComponent,
-    SettingsComponent
+    SettingsComponent,
+    NewserviceComponent,
+    EditserviceComponent
   ],
   bootstrap: [AppComponent],
   providers: [AuthenticationService, AlertService]

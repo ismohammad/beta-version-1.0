@@ -9,6 +9,7 @@ import { ForgotpwdComponent } from "./app/forgotpwd/forgotpwd.component";
 import { ManageserviceComponent } from './app/manageservice/manageservice.component';
 import { SettingsComponent } from "./app/settings/settings.component";
 import { ManageuserComponent } from "./app/manageuser/manageuser.component";
+import { NewserviceComponent } from './app/newservice/newservice.component';
 
 export const routerConfig: Routes = [
   {
@@ -97,6 +98,21 @@ export const routerConfig: Routes = [
       {
         path: "",
         component: ManageserviceComponent
+      },
+      {
+        path: "",
+        outlet: "sidemenu",
+        component: DashboardmenusectionComponent
+      }
+    ]
+  },
+    {
+    path: "newservice",
+    component: DashboardComponent,
+    children: [
+      {
+        path: "",
+        component: NewserviceComponent
       },
       {
         path: "",
