@@ -28,18 +28,6 @@ background-repeat: no-repeat;
  }
  
 
-.carousel-inner   img {
-
-height:400px;
-object-fit: initial;
-
-}
-
-.carousel-caption{
-  text-align: left;
-right:50px;
-bottom:100px
-}
 
  table{
     width:100%;

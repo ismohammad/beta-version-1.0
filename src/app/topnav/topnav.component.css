@@ -1,0 +1,14 @@
+
+.carousel-inner   img {
+
+height:350px;
+object-fit: initial;
+
+}
+
+.carousel-caption{
+  text-align: left;
+  right:50px;
+  top:70px;
+  font-size: 50px;
+}
