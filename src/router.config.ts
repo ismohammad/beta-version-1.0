@@ -3,7 +3,7 @@ import { HomeComponent } from "./app/home/home.component";
 import { DashboardComponent } from "./app/dashboard/dashboard.component";
 import { MenuComponent } from "./app/menu/menu.component";
 import { DashboardwidgetComponent } from "./app/dashboardwidget/dashboardwidget.component";
-import { HomewidgetmenuComponent } from "./app/homewidgetmenu/homewidgetmenu.component";
+import { HomeloginComponent } from "./app/homeloginsection/homeloginsection.component";
 import { HomecontentComponent } from "./app/homecontent/homecontent.component";
 import { ForgotpwdComponent } from "./app/forgotpwd/forgotpwd.component";
 import { DashboardcontentComponent } from "./app/dashboardcontent/dashboardcontent.component";
@@ -19,7 +19,7 @@ export const routerConfig: Routes = [
       {
         path: "",
         outlet: "homemenu",
-        component: HomewidgetmenuComponent
+        component: HomeloginComponent
       }
     ]
   },
@@ -34,7 +34,7 @@ export const routerConfig: Routes = [
        {
         path: "",
         outlet: "homemenu",
-        component: HomewidgetmenuComponent
+        component: HomeloginComponent
       }
     ]
   },
@@ -45,7 +45,7 @@ export const routerConfig: Routes = [
       {
         path: "",
         outlet: "homemenu",
-        component: HomewidgetmenuComponent
+        component: HomeloginComponent
       }
     ]
   },

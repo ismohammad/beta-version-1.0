@@ -7,7 +7,7 @@ import { RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MenuComponent } from "./menu/menu.component";
-import { HomewidgetmenuComponent } from "./homewidgetmenu/homewidgetmenu.component";
+import { HomeloginComponent } from "./homeloginsection/homeloginsection.component";
 import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.component";
 import { ManageuserComponent } from "./manageuser/manageuser.component";
 import { HomecontentComponent } from "./homecontent/homecontent.component";
@@ -38,7 +38,7 @@ import { SettingsComponent } from './settings/settings.component';
     HomeComponent,
     DashboardComponent,
     MenuComponent,
-    HomewidgetmenuComponent,
+    HomeloginComponent,
     DashboardwidgetComponent,
     ManageuserComponent,
     HomecontentComponent,

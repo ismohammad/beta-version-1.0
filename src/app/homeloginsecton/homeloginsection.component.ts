@@ -14,11 +14,11 @@ import { HomeComponent } from "../home/home.component";
 import { HomecontentComponent } from "../homecontent/homecontent.component";
 
 @Component({
-  selector: "app-homewidgetmenu",
-  templateUrl: "./homewidgetmenu.component.html",
-  styleUrls: ["./homewidgetmenu.component.css"]
+  selector: "app-homeloginsection",
+  templateUrl: "./homeloginsection.component.html",
+  styleUrls: ["./homeloginsection.component.css"]
 })
-export class HomewidgetmenuComponent implements OnInit {
+export class HomeloginComponent implements OnInit {
   loginForm: FormGroup;
   signupForm: FormGroup;
   fPwdForm: FormGroup;
