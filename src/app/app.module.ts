@@ -22,6 +22,7 @@ import { TopnavComponent } from './topnav/topnav.component';
 import { EdituserComponent } from './edituser/edituser.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomewhatwedosectionComponent } from './homewhatwedosection/homewhatwedosection.component';
+import { HomepurchasesectionComponent } from './homepurchasesection/homepurchasesection.component';
 
 @NgModule({
   imports: [
@@ -47,7 +48,8 @@ import { HomewhatwedosectionComponent } from './homewhatwedosection/homewhatwedo
     TopnavComponent,
     EdituserComponent,
     FooterComponent,
-    HomewhatwedosectionComponent
+    HomewhatwedosectionComponent,
+    HomepurchasesectionComponent
   ],
   bootstrap: [AppComponent],
   providers: [AuthenticationService, AlertService]
