@@ -10,7 +10,7 @@ import { DashboardmenusectionComponent } from "./dashboardmenusection/dashboardm
 import { HomeloginComponent } from "./homeloginsection/homeloginsection.component";
 import { ManageuserComponent } from "./manageuser/manageuser.component";
 import { HomewhatwedocontentsectionComponent } from "./homewhatwedocontentsection/homewhatwedocontentsection.component";
-import { AuthenticationService } from './service/authentication.service';
+import { AuthenticationService } from './_service/authentication.service';
 import { HttpClientModule  } from "@angular/common/http";
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { DashboardservicesectionComponent } from './dashboardservicesection/dashboardservicesection.component';
