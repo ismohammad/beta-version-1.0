@@ -3,10 +3,10 @@ import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-menu",
-  templateUrl: "./menu.component.html",
-  styleUrls: ["./menu.component.css"]
+  templateUrl: "./dashboardmenusection.component.html",
+  styleUrls: ["./dashboardmenusection.component.css"]
 })
-export class MenuComponent implements OnInit {
+export class DashboardmenusectionComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {

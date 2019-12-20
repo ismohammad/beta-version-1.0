@@ -1,7 +1,7 @@
 import { Routes } from "@angular/router";
 import { HomeComponent } from "./app/home/home.component";
 import { DashboardComponent } from "./app/dashboard/dashboard.component";
-import { MenuComponent } from "./app/menu/menu.component";
+import { DashboardmenusectionComponent } from "./app/dashboardmenusection/dashboardmenusection.component";
 import { DashboardservicesectionComponent } from "./app/dashboardservicesection/dashboardservicesection.component";
 import { HomeloginComponent } from "./app/homeloginsection/homeloginsection.component";
 import { HomewhatwedocontentsectionComponent } from "./app/homewhatwedocontentsection/homewhatwedocontentsection.component";
@@ -56,7 +56,7 @@ export const routerConfig: Routes = [
       {
         path: "",
         outlet: "sidemenu",
-        component: MenuComponent
+        component: DashboardmenusectionComponent
       }
     ]
   },
@@ -71,7 +71,7 @@ export const routerConfig: Routes = [
       {
         path: "",
         outlet: "sidemenu",
-        component: MenuComponent
+        component: DashboardmenusectionComponent
       }
     ]
   },
@@ -86,7 +86,7 @@ export const routerConfig: Routes = [
       {
         path: "",
         outlet: "sidemenu",
-        component: MenuComponent
+        component: DashboardmenusectionComponent
       }
     ]
   },
@@ -101,7 +101,7 @@ export const routerConfig: Routes = [
       {
         path: "",
         outlet: "sidemenu",
-        component: MenuComponent
+        component: DashboardmenusectionComponent
       }
     ]
   },

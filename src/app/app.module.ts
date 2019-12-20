@@ -6,9 +6,8 @@ import { AppComponent } from "./app.component";
 import { RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
-import { MenuComponent } from "./menu/menu.component";
+import { DashboardmenusectionComponent } from "./dashboardmenusection/dashboardmenusection.component";
 import { HomeloginComponent } from "./homeloginsection/homeloginsection.component";
-import { DashboardservicesectionComponent } from "./dashboardservicesection/dashboardservicesection.component";
 import { ManageuserComponent } from "./manageuser/manageuser.component";
 import { HomewhatwedocontentsectionComponent } from "./homewhatwedocontentsection/homewhatwedocontentsection.component";
 import { AuthenticationService } from './service/authentication.service';
@@ -37,7 +36,7 @@ import { SettingsComponent } from './settings/settings.component';
     AppComponent,
     HomeComponent,
     DashboardComponent,
-    MenuComponent,
+    DashboardmenusectionComponent,
     HomeloginComponent,
     DashboardservicesectionComponent,
     ManageuserComponent,
