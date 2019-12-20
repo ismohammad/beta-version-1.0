@@ -23,6 +23,7 @@ import { EdituserComponent } from './edituser/edituser.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomewhatwedosectionComponent } from './homewhatwedosection/homewhatwedosection.component';
 import { HomepurchasesectionComponent } from './homepurchasesection/homepurchasesection.component';
+import { ManageserviceComponent } from './manageservice/manageservice.component';
 
 @NgModule({
   imports: [
@@ -49,7 +50,8 @@ import { HomepurchasesectionComponent } from './homepurchasesection/homepurchase
     EdituserComponent,
     FooterComponent,
     HomewhatwedosectionComponent,
-    HomepurchasesectionComponent
+    HomepurchasesectionComponent,
+    ManageserviceComponent
   ],
   bootstrap: [AppComponent],
   providers: [AuthenticationService, AlertService]

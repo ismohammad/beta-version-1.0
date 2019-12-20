@@ -10,6 +10,7 @@ import { ForgotpwdComponent } from "./app/forgotpwd/forgotpwd.component";
 import { DashboardcontentComponent } from "./app/dashboardcontent/dashboardcontent.component";
 import { ManageuserComponent } from "./app/manageuser/manageuser.component";
 import { EdituserComponent } from './app/edituser/edituser.component'
+import { ManageserviceComponent } from './app/manageservice/manageservice.component';
 
 export const routerConfig: Routes = [
   {
@@ -103,8 +104,21 @@ export const routerConfig: Routes = [
       }
     ]
   },
-
-   
+  {
+    path: "manageservice",
+    component: DashboardComponent,
+     children: [
+      {
+        path: "",
+        component: ManageserviceComponent
+      },
+      {
+        path: "",
+        outlet: "sidemenu",
+        component: MenuComponent
+      }
+    ]
+  },
   {
     path: "",
     redirectTo: "/home",
