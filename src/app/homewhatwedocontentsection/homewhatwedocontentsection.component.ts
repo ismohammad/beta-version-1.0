@@ -3,10 +3,10 @@ import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-homecontent",
-  templateUrl: "./homecontent.component.html",
-  styleUrls: ["./homecontent.component.css"]
+  templateUrl: "./homewhatwedocontentsection.component.html",
+  styleUrls: ["./homewhatwedocontentsection.component.css"]
 })
-export class HomecontentComponent implements OnInit {
+export class HomewhatwedocontentsectionComponent implements OnInit {
   photography = false;
   music = false;
   health = false;

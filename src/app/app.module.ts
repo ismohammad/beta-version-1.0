@@ -10,7 +10,7 @@ import { MenuComponent } from "./menu/menu.component";
 import { HomeloginComponent } from "./homeloginsection/homeloginsection.component";
 import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.component";
 import { ManageuserComponent } from "./manageuser/manageuser.component";
-import { HomecontentComponent } from "./homecontent/homecontent.component";
+import { HomewhatwedocontentsectionComponent } from "./homewhatwedocontentsection/homewhatwedocontentsection.component";
 import { AuthenticationService } from './service/authentication.service';
 import { HttpClientModule  } from "@angular/common/http";
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
@@ -41,7 +41,7 @@ import { SettingsComponent } from './settings/settings.component';
     HomeloginComponent,
     DashboardwidgetComponent,
     ManageuserComponent,
-    HomecontentComponent,
+    HomewhatwedocontentsectionComponent,
     DashboardcontentComponent,
     AlertComponent,
     TopnavComponent,
