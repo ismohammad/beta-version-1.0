@@ -5,7 +5,6 @@ import { routerConfig } from "../router.config";
 import { AppComponent } from "./app.component";
 import { RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
-import { HomewidgetComponent } from "./homewidget/homewidget.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MenuComponent } from "./menu/menu.component";
 import { HomewidgetmenuComponent } from "./homewidgetmenu/homewidgetmenu.component";
@@ -37,7 +36,6 @@ import { SettingsComponent } from './settings/settings.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    HomewidgetComponent,
     DashboardComponent,
     MenuComponent,
     HomewidgetmenuComponent,

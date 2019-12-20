@@ -1,6 +1,5 @@
 import { Routes } from "@angular/router";
 import { HomeComponent } from "./app/home/home.component";
-import { HomewidgetComponent } from "./app/homewidget/homewidget.component";
 import { DashboardComponent } from "./app/dashboard/dashboard.component";
 import { MenuComponent } from "./app/menu/menu.component";
 import { DashboardwidgetComponent } from "./app/dashboardwidget/dashboardwidget.component";
@@ -17,10 +16,6 @@ export const routerConfig: Routes = [
     path: "home",
     component: HomeComponent,
     children: [
-      {
-        path: "",
-        component: HomewidgetComponent
-      },
       {
         path: "",
         outlet: "homemenu",
@@ -47,10 +42,6 @@ export const routerConfig: Routes = [
     path: "_nav/:id",
     component: HomeComponent,
     children: [
-      {
-        path: "",
-        component: HomewidgetComponent
-      },
       {
         path: "",
         outlet: "homemenu",
