@@ -8,8 +8,8 @@ import {
   FormControl
 } from "@angular/forms";
 import { first } from "rxjs/operators";
-import { AuthenticationService } from "../service/authentication.service";
-import { AlertService } from "../service/alert.service";
+import { AuthenticationService } from "../_service/authentication.service";
+import { AlertService } from "../_service/alert.service";
 import { HomeComponent } from "../home/home.component";
 import { HomecontentComponent } from "../homecontent/homecontent.component";
 
