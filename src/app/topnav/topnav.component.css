@@ -10,5 +10,9 @@ object-fit: initial;
   text-align: left;
   right:50px;
   top:70px;
-  font-size: 50px;
+  font-size: 20px;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255,102,203);
 }
