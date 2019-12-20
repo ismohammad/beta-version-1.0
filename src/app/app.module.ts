@@ -20,7 +20,7 @@ import { TopnavComponent } from './topnav/topnav.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomewhatwedosectionComponent } from './homewhatwedosection/homewhatwedosection.component';
 import { HomepurchasesectionComponent } from './homepurchasesection/homepurchasesection.component';
-import { DashboardmanageservicesectionComponent } from './dashboardmanageservicesection/dashboardmanageservicesection.component';
+import { ManageserviceComponent } from './manageservice/manageservice.component';
 import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
@@ -47,7 +47,7 @@ import { SettingsComponent } from './settings/settings.component';
     FooterComponent,
     HomewhatwedosectionComponent,
     HomepurchasesectionComponent,
-    DashboardmanageservicesectionComponent,
+    ManageserviceComponent,
     SettingsComponent
   ],
   bootstrap: [AppComponent],

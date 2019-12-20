@@ -6,7 +6,7 @@ import { DashboardservicesectionComponent } from "./app/dashboardservicesection/
 import { HomeloginComponent } from "./app/homeloginsection/homeloginsection.component";
 import { HomewhatwedocontentsectionComponent } from "./app/homewhatwedocontentsection/homewhatwedocontentsection.component";
 import { ForgotpwdComponent } from "./app/forgotpwd/forgotpwd.component";
-import { DashboardmanageservicesectionComponent } from "./app/dashboardmanageservicesection/dashboardmanageservicesection.component";
+import { ManageserviceComponent } from './app/manageservice/manageservice.component';
 import { SettingsComponent } from "./app/settings/settings.component";
 import { ManageuserComponent } from "./app/manageuser/manageuser.component";
 
@@ -96,7 +96,7 @@ export const routerConfig: Routes = [
     children: [
       {
         path: "",
-        component: DashboardmanageservicesectionComponent
+        component: ManageserviceComponent
       },
       {
         path: "",
