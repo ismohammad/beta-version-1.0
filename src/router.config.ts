@@ -9,8 +9,8 @@ import { HomecontentComponent } from "./app/homecontent/homecontent.component";
 import { ForgotpwdComponent } from "./app/forgotpwd/forgotpwd.component";
 import { DashboardcontentComponent } from "./app/dashboardcontent/dashboardcontent.component";
 import { ManageuserComponent } from "./app/manageuser/manageuser.component";
-import { EdituserComponent } from './app/edituser/edituser.component'
 import { ManageserviceComponent } from './app/manageservice/manageservice.component';
+import { SettingsComponent } from './app/settings/settings.component';
 
 export const routerConfig: Routes = [
   {
@@ -90,12 +90,12 @@ export const routerConfig: Routes = [
     ]
   },
   {
-    path: "editprofile/:id",
+    path: "settings",
     component: DashboardComponent,
     children: [
       {
         path: "",
-        component: EdituserComponent
+        component: SettingsComponent
       },
       {
         path: "",

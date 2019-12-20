@@ -19,11 +19,11 @@ import { DashboardcontentComponent } from './dashboardcontent/dashboardcontent.c
 import { AlertComponent } from './alert/alert.component';
 import { AlertService } from './service/alert.service';
 import { TopnavComponent } from './topnav/topnav.component';
-import { EdituserComponent } from './edituser/edituser.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomewhatwedosectionComponent } from './homewhatwedosection/homewhatwedosection.component';
 import { HomepurchasesectionComponent } from './homepurchasesection/homepurchasesection.component';
 import { ManageserviceComponent } from './manageservice/manageservice.component';
+import { SettingsComponent } from './settings/settings.component';
 
 @NgModule({
   imports: [
@@ -47,11 +47,11 @@ import { ManageserviceComponent } from './manageservice/manageservice.component'
     DashboardcontentComponent,
     AlertComponent,
     TopnavComponent,
-    EdituserComponent,
     FooterComponent,
     HomewhatwedosectionComponent,
     HomepurchasesectionComponent,
-    ManageserviceComponent
+    ManageserviceComponent,
+    SettingsComponent
   ],
   bootstrap: [AppComponent],
   providers: [AuthenticationService, AlertService]
