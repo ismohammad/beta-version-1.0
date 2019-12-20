@@ -63,7 +63,7 @@ export const routerConfig: Routes = [
     ]
   },
   {
-    path: "menu/:id",
+    path: "manageusers",
     component: DashboardComponent,
     children: [
       {
