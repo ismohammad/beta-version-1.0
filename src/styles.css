@@ -27,9 +27,7 @@ background-repeat: no-repeat;
    max-width: 1600px;
  }
  
-
-
- table{
+table{
     width:100%;
 }
 #example_filter{
@@ -38,9 +36,4 @@ background-repeat: no-repeat;
 #example_paginate{
     float:right;
 }
-label {
-    display: inline-flex;
-    margin-bottom: .5rem;
-    margin-top: .5rem;
-   
-} 
+ 
