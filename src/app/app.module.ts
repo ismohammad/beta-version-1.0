@@ -14,7 +14,7 @@ import { HomewhatwedocontentsectionComponent } from "./homewhatwedocontentsectio
 import { AuthenticationService } from './service/authentication.service';
 import { HttpClientModule  } from "@angular/common/http";
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
-import { DashboardcontentComponent } from './dashboardcontent/dashboardcontent.component';
+import { DashboardservicesectionComponent } from './dashboardservicesection/dashboardservicesection.component';
 import { AlertComponent } from './alert/alert.component';
 import { AlertService } from './service/alert.service';
 import { TopnavComponent } from './topnav/topnav.component';
@@ -42,7 +42,7 @@ import { SettingsComponent } from './settings/settings.component';
     DashboardservicesectionComponent,
     ManageuserComponent,
     HomewhatwedocontentsectionComponent,
-    DashboardcontentComponent,
+    DashboardservicesectionComponent,
     AlertComponent,
     TopnavComponent,
     FooterComponent,
