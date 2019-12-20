@@ -1,9 +1,10 @@
 	.title-arch {
 		text-align: center;
 		margin: 50px 0;
-		font-size: 22px;
+		font-size: 33px;
 		letter-spacing: 2px;
 		text-transform: uppercase;
+    color: white
 	}
 .project {
 	width: 100%;
