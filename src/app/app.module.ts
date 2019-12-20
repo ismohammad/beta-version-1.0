@@ -8,7 +8,7 @@ import { HomeComponent } from "./home/home.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MenuComponent } from "./menu/menu.component";
 import { HomeloginComponent } from "./homeloginsection/homeloginsection.component";
-import { DashboardwidgetComponent } from "./dashboardwidget/dashboardwidget.component";
+import { DashboardservicesectionComponent } from "./dashboardservicesection/dashboardservicesection.component";
 import { ManageuserComponent } from "./manageuser/manageuser.component";
 import { HomewhatwedocontentsectionComponent } from "./homewhatwedocontentsection/homewhatwedocontentsection.component";
 import { AuthenticationService } from './service/authentication.service';
@@ -39,7 +39,7 @@ import { SettingsComponent } from './settings/settings.component';
     DashboardComponent,
     MenuComponent,
     HomeloginComponent,
-    DashboardwidgetComponent,
+    DashboardservicesectionComponent,
     ManageuserComponent,
     HomewhatwedocontentsectionComponent,
     DashboardcontentComponent,
